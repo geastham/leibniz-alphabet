@@ -1,0 +1,37 @@
+iteration_state:
+  current_iteration: 0
+  phase: EXPANSION
+  cycle_in_phase: 0
+  last_updated: null
+
+  current_strategy:
+    proposer_mode: DOMAIN_SWEEP
+    proposer_temperature: 0.7
+    critic_strictness: 0.5
+    domains_priority:
+      - being
+      - space
+      - time
+      - causation
+      - mind
+
+  pending:
+    candidates_to_evaluate: []
+    candidates_to_revise: []
+    conflicts_to_resolve: []
+    gaps_to_fill: []
+
+  metrics:
+    recent_acceptance_rate: null
+    coverage_score: 0.0
+    consistency_score: 1.0
+
+  triggers:
+    meta_reflection_due: false
+    iterations_since_meta: 0
+    iterations_since_primitive: 0
+
+  history:
+    total_proposed: 0
+    total_accepted: 0
+    total_rejected: 0

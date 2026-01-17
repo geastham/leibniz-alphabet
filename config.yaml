@@ -1,0 +1,48 @@
+# ALPHABETUM Configuration
+# Main configuration file for the autonomous reasoning system
+
+version: "1.0.0"
+
+llm:
+  provider: anthropic  # or 'openai'
+  model: claude-3-opus-20240229
+  max_tokens: 4096
+  timeout_seconds: 120
+  retry_attempts: 3
+  retry_delay_seconds: 5
+
+temperatures:
+  proposer: 0.7
+  critic: 0.3
+  refiner: 0.5
+  meta_reasoner: 0.5
+
+iteration:
+  candidates_per_cycle: 3
+  expansion_cycles: 4
+  consolidation_cycles: 2
+  composition_cycles: 3
+  meta_reflection_interval: 5
+
+stopping:
+  coverage_threshold: 0.90
+  diminishing_returns_window: 10
+  diminishing_returns_threshold: 2
+  max_iterations: 500
+  stability_window: 10
+
+logging:
+  level: DEBUG
+  include_raw_llm_output: true
+  pretty_print_yaml: true
+
+validation:
+  run_consistency_check: true
+  run_coverage_check: true
+  check_interval: 10
+
+paths:
+  alphabet: alphabet/
+  reasoning: reasoning/
+  calculus: calculus/
+  validation: validation/

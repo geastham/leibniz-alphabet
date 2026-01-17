@@ -1,0 +1,87 @@
+operators:
+  version: "1.0.0"
+
+  composition_operators:
+    - id: OP_CONJ
+      symbol: "∧"
+      name: conjunction
+      arity: 2
+      variadic: true
+      description: "Combine concepts - both must apply"
+      semantics:
+        informal: "Both concepts apply to the subject"
+        formal: "∀x: (A∧B)(x) ↔ A(x) ∧ B(x)"
+      prime_operation: "multiplication"
+      examples:
+        - inputs: ["ANIMAL", "RATIONAL"]
+          output: "HUMAN"
+          explanation: "HUMAN = ANIMAL ∧ RATIONAL"
+
+    - id: OP_NEG
+      symbol: "¬"
+      name: negation
+      arity: 1
+      description: "Exclude a concept"
+      semantics:
+        informal: "The concept does not apply"
+        formal: "∀x: (¬A)(x) ↔ ¬A(x)"
+      prime_operation: "shift to negative track"
+      examples:
+        - inputs: ["LIVING"]
+          output: "NOT-LIVING"
+          explanation: "Things to which LIVING does not apply"
+
+    - id: OP_DISJ
+      symbol: "∨"
+      name: disjunction
+      arity: 2
+      variadic: true
+      description: "At least one concept applies"
+      semantics:
+        informal: "At least one of the concepts applies"
+        formal: "∀x: (A∨B)(x) ↔ A(x) ∨ B(x)"
+      prime_operation: "set union of possibilities"
+      examples:
+        - inputs: ["VERTEBRATE", "INVERTEBRATE"]
+          output: "ANIMAL"
+          explanation: "An animal is either vertebrate or invertebrate"
+
+    - id: OP_IMPL
+      symbol: "→"
+      name: implication
+      arity: 2
+      description: "If first applies, second must apply"
+      semantics:
+        informal: "If the first concept applies, so does the second"
+        formal: "∀x: A(x) → B(x)"
+      prime_operation: "rule storage"
+      examples:
+        - inputs: ["HUMAN", "MORTAL"]
+          output: "rule: HUMAN → MORTAL"
+          explanation: "All humans are mortal"
+
+    - id: OP_PRED
+      symbol: "()"
+      name: predication
+      arity: 2
+      description: "Apply predicate to subject"
+      semantics:
+        informal: "The predicate applies to the subject"
+        formal: "P(x)"
+      examples:
+        - inputs: ["RED", "apple"]
+          output: "RED(apple)"
+          explanation: "The apple is red"
+
+    - id: OP_REL
+      symbol: "R(,)"
+      name: relation
+      arity: 3
+      description: "Relate two entities via a relation"
+      semantics:
+        informal: "The relation holds between two entities"
+        formal: "R(a, b)"
+      examples:
+        - inputs: ["CAUSES", "fire", "smoke"]
+          output: "CAUSES(fire, smoke)"
+          explanation: "Fire causes smoke"

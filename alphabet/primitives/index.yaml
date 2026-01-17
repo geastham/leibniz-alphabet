@@ -1,0 +1,14 @@
+alphabet_index:
+  version: "1.0.0"
+  last_updated: null
+  iteration: 0
+
+  statistics:
+    total_primitives: 0
+    by_domain: {}
+    by_status:
+      stable: 0
+      recent: 0
+      contested: 0
+
+  primitives: []

@@ -1,0 +1,79 @@
+domain_index:
+  version: "1.0.0"
+  last_updated: null
+
+  domains:
+    - name: being
+      description: "Primitives relating to existence, identity, and essence"
+      primitive_count: 0
+      primitives: []
+
+    - name: space
+      description: "Primitives relating to spatial extension, location, and shape"
+      primitive_count: 0
+      primitives: []
+
+    - name: time
+      description: "Primitives relating to duration, succession, and simultaneity"
+      primitive_count: 0
+      primitives: []
+
+    - name: causation
+      description: "Primitives relating to cause, effect, and influence"
+      primitive_count: 0
+      primitives: []
+
+    - name: mind
+      description: "Primitives relating to consciousness, thought, and perception"
+      primitive_count: 0
+      primitives: []
+
+    - name: matter
+      description: "Primitives relating to physical substance and properties"
+      primitive_count: 0
+      primitives: []
+
+    - name: quantity
+      description: "Primitives relating to number, magnitude, and degree"
+      primitive_count: 0
+      primitives: []
+
+    - name: quality
+      description: "Primitives relating to properties and attributes"
+      primitive_count: 0
+      primitives: []
+
+    - name: relation
+      description: "Primitives relating to between, with, and towards"
+      primitive_count: 0
+      primitives: []
+
+    - name: ethics
+      description: "Primitives relating to good, bad, and ought"
+      primitive_count: 0
+      primitives: []
+
+    - name: emotion
+      description: "Primitives relating to feeling and affect"
+      primitive_count: 0
+      primitives: []
+
+    - name: action
+      description: "Primitives relating to doing and agency"
+      primitive_count: 0
+      primitives: []
+
+    - name: knowledge
+      description: "Primitives relating to belief, truth, and justification"
+      primitive_count: 0
+      primitives: []
+
+    - name: social
+      description: "Primitives relating to person, group, and institution"
+      primitive_count: 0
+      primitives: []
+
+    - name: language
+      description: "Primitives relating to meaning, reference, and expression"
+      primitive_count: 0
+      primitives: []
