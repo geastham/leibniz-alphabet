@@ -1,0 +1,243 @@
+benchmark_concepts:
+  version: "1.0.0"
+
+  # === METAPHYSICS ===
+  - id: BM_001
+    name: "change"
+    domain: metaphysics
+    complexity: medium
+    decomposition_hints: [thing, time, state, difference]
+
+  - id: BM_002
+    name: "identity"
+    domain: metaphysics
+    complexity: simple
+    decomposition_hints: [same, one]
+    note: "May be primitive itself"
+
+  - id: BM_003
+    name: "possibility"
+    domain: metaphysics
+    complexity: high
+    decomposition_hints: [existence, negation, world]
+
+  - id: BM_004
+    name: "necessity"
+    domain: metaphysics
+    complexity: high
+    decomposition_hints: [existence, all, world]
+
+  - id: BM_005
+    name: "substance"
+    domain: metaphysics
+    complexity: high
+    decomposition_hints: [thing, independence, persistence]
+
+  # === EPISTEMOLOGY ===
+  - id: BM_010
+    name: "knowledge"
+    domain: epistemology
+    complexity: high
+    decomposition_hints: [belief, truth, justification]
+
+  - id: BM_011
+    name: "belief"
+    domain: epistemology
+    complexity: medium
+    decomposition_hints: [mind, proposition, attitude]
+
+  - id: BM_012
+    name: "truth"
+    domain: epistemology
+    complexity: high
+    decomposition_hints: [proposition, correspondence, reality]
+
+  - id: BM_013
+    name: "evidence"
+    domain: epistemology
+    complexity: medium
+    decomposition_hints: [information, support, belief]
+
+  # === ETHICS ===
+  - id: BM_020
+    name: "justice"
+    domain: ethics
+    complexity: high
+    decomposition_hints: [fairness, desert, rights, social]
+
+  - id: BM_021
+    name: "duty"
+    domain: ethics
+    complexity: medium
+    decomposition_hints: [obligation, action, moral]
+
+  - id: BM_022
+    name: "virtue"
+    domain: ethics
+    complexity: high
+    decomposition_hints: [character, good, disposition]
+
+  - id: BM_023
+    name: "harm"
+    domain: ethics
+    complexity: medium
+    decomposition_hints: [bad, damage, agent]
+
+  # === MIND ===
+  - id: BM_030
+    name: "consciousness"
+    domain: mind
+    complexity: high
+    decomposition_hints: [awareness, experience, self]
+    note: "May be primitive itself"
+
+  - id: BM_031
+    name: "intention"
+    domain: mind
+    complexity: medium
+    decomposition_hints: [mind, goal, action, future]
+
+  - id: BM_032
+    name: "emotion"
+    domain: mind
+    complexity: medium
+    decomposition_hints: [feeling, body, evaluation]
+
+  - id: BM_033
+    name: "perception"
+    domain: mind
+    complexity: medium
+    decomposition_hints: [sense, awareness, object]
+
+  - id: BM_034
+    name: "memory"
+    domain: mind
+    complexity: medium
+    decomposition_hints: [mind, past, retention]
+
+  # === SOCIAL ===
+  - id: BM_040
+    name: "promise"
+    domain: social
+    complexity: medium
+    decomposition_hints: [speech, future, obligation]
+
+  - id: BM_041
+    name: "institution"
+    domain: social
+    complexity: high
+    decomposition_hints: [group, rules, persistent, social]
+
+  - id: BM_042
+    name: "authority"
+    domain: social
+    complexity: high
+    decomposition_hints: [power, legitimacy, relation]
+
+  - id: BM_043
+    name: "ownership"
+    domain: social
+    complexity: medium
+    decomposition_hints: [thing, person, right, exclusive]
+
+  # === PHYSICAL ===
+  - id: BM_050
+    name: "motion"
+    domain: physical
+    complexity: simple
+    decomposition_hints: [space, time, change, thing]
+
+  - id: BM_051
+    name: "force"
+    domain: physical
+    complexity: medium
+    decomposition_hints: [causation, motion, interaction]
+
+  - id: BM_052
+    name: "energy"
+    domain: physical
+    complexity: high
+    decomposition_hints: [capacity, work, conservation]
+
+  # === EVERYDAY ===
+  - id: BM_060
+    name: "tool"
+    domain: everyday
+    complexity: simple
+    decomposition_hints: [thing, purpose, use]
+
+  - id: BM_061
+    name: "gift"
+    domain: everyday
+    complexity: medium
+    decomposition_hints: [thing, transfer, voluntary, social]
+
+  - id: BM_062
+    name: "game"
+    domain: everyday
+    complexity: medium
+    decomposition_hints: [activity, rules, play, competition]
+
+  - id: BM_063
+    name: "home"
+    domain: everyday
+    complexity: medium
+    decomposition_hints: [place, dwelling, belonging]
+
+  # === ABSTRACT ===
+  - id: BM_070
+    name: "number"
+    domain: abstract
+    complexity: high
+    decomposition_hints: [quantity, unit, plurality]
+    note: "May be primitive itself"
+
+  - id: BM_071
+    name: "set"
+    domain: abstract
+    complexity: high
+    decomposition_hints: [collection, membership, plurality]
+
+  - id: BM_072
+    name: "function"
+    domain: abstract
+    complexity: high
+    decomposition_hints: [mapping, input, output, relation]
+
+  # === TEMPORAL ===
+  - id: BM_080
+    name: "past"
+    domain: temporal
+    complexity: simple
+    decomposition_hints: [time, before, now]
+
+  - id: BM_081
+    name: "future"
+    domain: temporal
+    complexity: simple
+    decomposition_hints: [time, after, now]
+
+  - id: BM_082
+    name: "duration"
+    domain: temporal
+    complexity: medium
+    decomposition_hints: [time, extension, measure]
+
+  # === SPATIAL ===
+  - id: BM_090
+    name: "inside"
+    domain: spatial
+    complexity: simple
+    decomposition_hints: [space, boundary, containment]
+
+  - id: BM_091
+    name: "distance"
+    domain: spatial
+    complexity: simple
+    decomposition_hints: [space, separation, measure]
+
+  - id: BM_092
+    name: "shape"
+    domain: spatial
+    complexity: medium
+    decomposition_hints: [boundary, form, space]

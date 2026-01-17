@@ -1,0 +1,69 @@
+rules:
+  version: "1.0.0"
+
+  well_formedness_rules:
+    - id: WF_NO_CONTRADICTION
+      description: "A concept cannot contain both P and ¬P"
+      check: "gcd(positive_track, negative_track) == 1"
+      violation_type: contradiction
+
+    - id: WF_PRESUPPOSITIONS_MET
+      description: "All presupposed primitives must be present"
+      check: "for each P in concept: all presuppositions of P are in concept"
+      violation_type: incomplete
+
+    - id: WF_NO_CONTRASTS
+      description: "Contrasting primitives cannot coexist"
+      check: "for each pair (P, Q) in concept: (P, Q) not in contrasts"
+      violation_type: incompatible
+
+  inference_rules:
+    - id: INF_CONTAINMENT
+      name: "Containment Inference"
+      premises:
+        - "X is A∧B"
+      conclusion: "X is A AND X is B"
+
+    - id: INF_TRANSITIVITY
+      name: "Transitivity of Implication"
+      premises:
+        - "A → B"
+        - "B → C"
+      conclusion: "A → C"
+
+    - id: INF_PRESUPPOSITION
+      name: "Presupposition Inheritance"
+      premises:
+        - "X is A"
+        - "A presupposes B"
+      conclusion: "X is B"
+
+    - id: INF_CONTRAPOSITION
+      name: "Contraposition"
+      premises:
+        - "A → B"
+      conclusion: "¬B → ¬A"
+
+    - id: INF_MODUS_PONENS
+      name: "Modus Ponens"
+      premises:
+        - "A → B"
+        - "A"
+      conclusion: "B"
+
+  composition_patterns:
+    - name: "Differentiation"
+      pattern: "GENUS ∧ DIFFERENTIA → SPECIES"
+      example: "ANIMAL ∧ RATIONAL → HUMAN"
+
+    - name: "Negation Specialization"
+      pattern: "GENUS ∧ ¬PROPERTY → SUBSPECIES"
+      example: "OBJECT ∧ ¬LIVING → INANIMATE"
+
+    - name: "Relational Composition"
+      pattern: "RELATION(A, B)"
+      example: "CAUSE(EVENT_A, EVENT_B)"
+
+    - name: "Property Attribution"
+      pattern: "THING ∧ PROPERTY"
+      example: "OBJECT ∧ RED → RED_OBJECT"
