@@ -12,6 +12,7 @@ from ..state.models import (
 )
 from ..agents import ProposerAgent, CriticAgent, RefinerAgent, MetaReasonerAgent
 from ..logging import Archivist
+from ..analytics.expressiveness import ExpressivenessAnalyzer
 
 
 class AlphabetumLoop:
@@ -304,10 +305,53 @@ class AlphabetumLoop:
 
             # If we've completed a full cycle, increment iteration
             if state.phase == Phase.EXPANSION:
+                # Run expressiveness metrics before advancing
+                self._compute_expressiveness_metrics(state)
                 state.current_iteration += 1
                 print(f"\n>>> Advancing to iteration {state.current_iteration}")
 
         return state
+
+    def _compute_expressiveness_metrics(self, state: IterationState) -> None:
+        """Compute and save expressiveness metrics for the iteration."""
+        print(f"\n--- EXPRESSIVENESS METRICS ---")
+
+        try:
+            analyzer = ExpressivenessAnalyzer(self.state_manager)
+            metrics = analyzer.analyze()
+
+            # Print summary
+            print(f"  Corpus Coverage: {metrics.corpus_coverage:.1%}")
+            print(f"  Concepts Expressible: {metrics.concepts_expressible}")
+            print(f"  Shannon Entropy: {metrics.shannon_entropy:.3f}")
+            print(f"  Bits per Concept: {metrics.bits_per_concept:.2f}")
+            print(f"  MDL Score: {metrics.mdl_score:.4f}")
+
+            # Save report
+            report = analyzer.generate_report(state.current_iteration)
+            report["expressiveness_report"]["timestamp"] = datetime.utcnow().isoformat() + "Z"
+
+            # Save to reports directory
+            reports_dir = self.base_path / "reports" / "expressiveness"
+            reports_dir.mkdir(parents=True, exist_ok=True)
+
+            yaml_path = reports_dir / f"iteration_{state.current_iteration:03d}.yaml"
+            with open(yaml_path, "w") as f:
+                yaml.dump(report, f, default_flow_style=False, sort_keys=False)
+
+            # Also save encoding table
+            md_content = analyzer.generate_encoding_table()
+            md_path = reports_dir / f"iteration_{state.current_iteration:03d}_encodings.md"
+            with open(md_path, "w") as f:
+                f.write(md_content)
+
+            print(f"  Reports saved to: {reports_dir}")
+
+            # Update state with expressiveness coverage
+            state.coverage_score = max(state.coverage_score, metrics.corpus_coverage)
+
+        except Exception as e:
+            print(f"  [WARN] Could not compute expressiveness metrics: {e}")
 
     def _should_stop(self, state: IterationState, max_iterations: int) -> bool:
         """Check if any stopping condition is met."""

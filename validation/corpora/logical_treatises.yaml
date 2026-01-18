@@ -1,0 +1,886 @@
+# Canonical Corpus of Logical Treatises
+# =====================================
+# A fixed body of concepts from foundational logical and philosophical works
+# used to measure the alphabet's expressiveness and encoding efficiency.
+#
+# Each concept includes:
+#   - source: The treatise/work it comes from
+#   - decomposition: Suggested primitive composition (using our alphabet)
+#   - complexity: Estimated number of primitives needed
+#   - canonical: Whether this is a foundational concept in the source work
+
+corpus:
+  version: "1.0.0"
+  description: "Canonical concepts from foundational logical treatises for alphabet evaluation"
+
+  # ============================================================================
+  # ARISTOTLE'S CATEGORIES (Categories, ~350 BCE)
+  # The ten fundamental categories of being
+  # ============================================================================
+  aristotle_categories:
+    source: "Aristotle, Categories"
+    weight: 1.0  # Full weight for foundational work
+
+    concepts:
+      - id: AR_001
+        name: "substance"
+        greek: "ousia"
+        description: "That which is neither said of nor in a subject"
+        decomposition:
+          primitives: [existence, identity]
+          formula: "∃ ∧ ≡(self)"
+          confidence: 0.85
+        canonical: true
+
+      - id: AR_002
+        name: "quantity"
+        greek: "poson"
+        description: "The category of how much or how many"
+        decomposition:
+          primitives: [quantity]
+          formula: "#"
+          confidence: 0.95
+        canonical: true
+        note: "Direct primitive mapping"
+
+      - id: AR_003
+        name: "quality"
+        greek: "poion"
+        description: "The category of what kind"
+        decomposition:
+          primitives: [quality]
+          formula: "Q"
+          confidence: 0.95
+        canonical: true
+        note: "Direct primitive mapping"
+
+      - id: AR_004
+        name: "relation"
+        greek: "pros ti"
+        description: "That which is said to be what it is of or than another"
+        decomposition:
+          primitives: [identity, negation]
+          formula: "≡ → ¬≡(self)"
+          confidence: 0.7
+        canonical: true
+
+      - id: AR_005
+        name: "place"
+        greek: "pou"
+        description: "Where something is"
+        decomposition:
+          primitives: [adjacency, existence]
+          formula: "⊣ ∧ ∃"
+          confidence: 0.8
+        canonical: true
+
+      - id: AR_006
+        name: "time"
+        greek: "pote"
+        description: "When something is"
+        decomposition:
+          primitives: [succession, existence]
+          formula: "≺ ∧ ∃"
+          confidence: 0.85
+        canonical: true
+
+      - id: AR_007
+        name: "position"
+        greek: "keisthai"
+        description: "The posture or arrangement"
+        decomposition:
+          primitives: [adjacency, composition]
+          formula: "⊣ ∧ ⊏"
+          confidence: 0.75
+        canonical: true
+
+      - id: AR_008
+        name: "state"
+        greek: "echein"
+        description: "Having or possession"
+        decomposition:
+          primitives: [existence, composition]
+          formula: "∃ ∧ ⊏"
+          confidence: 0.7
+        canonical: true
+
+      - id: AR_009
+        name: "action"
+        greek: "poiein"
+        description: "Acting upon another"
+        decomposition:
+          primitives: [intentionality, succession]
+          derived: [causation]
+          formula: "→m ∧ (≺ + ◇¬)"
+          confidence: 0.8
+        canonical: true
+
+      - id: AR_010
+        name: "passion"
+        greek: "paschein"
+        description: "Being acted upon"
+        decomposition:
+          primitives: [existence, succession, negation]
+          derived: [causation]
+          formula: "∃ ∧ ¬→m ∧ (≺ + ◇¬)"
+          confidence: 0.75
+        canonical: true
+
+  # ============================================================================
+  # KANT'S CATEGORIES (Critique of Pure Reason, 1781)
+  # The twelve categories of understanding
+  # ============================================================================
+  kant_categories:
+    source: "Kant, Critique of Pure Reason"
+    weight: 1.0
+
+    concepts:
+      # -- Quantity --
+      - id: KA_001
+        name: "unity"
+        description: "The concept of one"
+        decomposition:
+          primitives: [quantity, identity]
+          formula: "# ∧ ≡"
+          confidence: 0.85
+        canonical: true
+
+      - id: KA_002
+        name: "plurality"
+        description: "The concept of many"
+        decomposition:
+          primitives: [quantity, negation]
+          formula: "# ∧ ¬(≡)"
+          confidence: 0.8
+        canonical: true
+
+      - id: KA_003
+        name: "totality"
+        description: "The concept of all"
+        decomposition:
+          primitives: [quantity, composition]
+          formula: "# ∧ ⊏(all)"
+          confidence: 0.75
+        canonical: true
+
+      # -- Quality --
+      - id: KA_004
+        name: "reality"
+        description: "Positive being/existence"
+        decomposition:
+          primitives: [existence]
+          formula: "∃"
+          confidence: 0.9
+        canonical: true
+
+      - id: KA_005
+        name: "negation"
+        description: "Non-being"
+        decomposition:
+          primitives: [negation, existence]
+          formula: "¬∃"
+          confidence: 0.95
+        canonical: true
+
+      - id: KA_006
+        name: "limitation"
+        description: "Bounded reality"
+        decomposition:
+          primitives: [existence, negation, composition]
+          formula: "∃ ∧ ⊏ ∧ ¬(⊏_total)"
+          confidence: 0.7
+        canonical: true
+
+      # -- Relation --
+      - id: KA_007
+        name: "inherence_subsistence"
+        description: "Substance and accident"
+        decomposition:
+          primitives: [existence, identity, composition]
+          formula: "∃ ∧ ≡ ∧ ⊏"
+          confidence: 0.75
+        canonical: true
+
+      - id: KA_008
+        name: "causality_dependence"
+        description: "Cause and effect"
+        decomposition:
+          primitives: [succession, possibility, negation]
+          derived: [causation]
+          formula: "≺ ∧ ◇¬"
+          confidence: 0.85
+        canonical: true
+
+      - id: KA_009
+        name: "community"
+        description: "Reciprocal action"
+        decomposition:
+          primitives: [succession, possibility, negation, identity]
+          derived: [causation]
+          formula: "(≺ ∧ ◇¬)_bidirectional"
+          confidence: 0.7
+        canonical: true
+
+      # -- Modality --
+      - id: KA_010
+        name: "possibility_impossibility"
+        description: "What can or cannot be"
+        decomposition:
+          primitives: [possibility, negation]
+          formula: "◇ / ¬◇"
+          confidence: 0.95
+        canonical: true
+
+      - id: KA_011
+        name: "existence_nonexistence"
+        description: "What is or is not"
+        decomposition:
+          primitives: [existence, negation]
+          formula: "∃ / ¬∃"
+          confidence: 0.95
+        canonical: true
+
+      - id: KA_012
+        name: "necessity_contingency"
+        description: "What must be or might not be"
+        decomposition:
+          primitives: [possibility, negation]
+          derived: [necessity]
+          formula: "¬◇¬ / ◇¬"
+          confidence: 0.9
+        canonical: true
+
+  # ============================================================================
+  # FREGE'S FOUNDATIONS (Begriffsschrift, 1879; Grundlagen, 1884)
+  # Core concepts of modern logic
+  # ============================================================================
+  frege_foundations:
+    source: "Frege, Begriffsschrift & Grundlagen"
+    weight: 1.0
+
+    concepts:
+      - id: FR_001
+        name: "concept"
+        german: "Begriff"
+        description: "A function whose value is always a truth-value"
+        decomposition:
+          primitives: [intentionality, quality]
+          formula: "→m ∧ Q"
+          confidence: 0.75
+        canonical: true
+
+      - id: FR_002
+        name: "object"
+        german: "Gegenstand"
+        description: "That which is not a function"
+        decomposition:
+          primitives: [existence, identity]
+          formula: "∃ ∧ ≡"
+          confidence: 0.85
+        canonical: true
+
+      - id: FR_003
+        name: "function"
+        german: "Funktion"
+        description: "An unsaturated expression requiring completion"
+        decomposition:
+          primitives: [identity, composition, negation]
+          formula: "≡(input→output) ∧ ⊏"
+          confidence: 0.65
+        canonical: true
+
+      - id: FR_004
+        name: "truth_value"
+        german: "Wahrheitswert"
+        description: "The True or the False"
+        decomposition:
+          primitives: [existence, intentionality]
+          derived: [truth]
+          formula: "→m ∧ (∃ / ¬∃)"
+          confidence: 0.8
+        canonical: true
+
+      - id: FR_005
+        name: "sense"
+        german: "Sinn"
+        description: "The mode of presentation of a reference"
+        decomposition:
+          primitives: [intentionality, quality]
+          formula: "→m ∧ Q(presentation)"
+          confidence: 0.7
+        canonical: true
+
+      - id: FR_006
+        name: "reference"
+        german: "Bedeutung"
+        description: "That which an expression denotes"
+        decomposition:
+          primitives: [intentionality, existence]
+          formula: "→m → ∃"
+          confidence: 0.85
+        canonical: true
+
+      - id: FR_007
+        name: "identity_statement"
+        description: "a=b as informative"
+        decomposition:
+          primitives: [identity, intentionality]
+          formula: "≡ ∧ →m(sense_difference)"
+          confidence: 0.75
+        canonical: true
+
+      - id: FR_008
+        name: "assertion"
+        german: "Behauptung"
+        description: "The act of judging something true"
+        decomposition:
+          primitives: [intentionality, normativity]
+          derived: [truth]
+          formula: "→m ∧ ⊨(truth)"
+          confidence: 0.8
+        canonical: true
+
+  # ============================================================================
+  # RUSSELL/WHITEHEAD (Principia Mathematica, 1910-1913)
+  # Foundational logical concepts
+  # ============================================================================
+  principia_mathematica:
+    source: "Russell & Whitehead, Principia Mathematica"
+    weight: 0.9
+
+    concepts:
+      - id: PM_001
+        name: "propositional_function"
+        description: "A function from objects to propositions"
+        decomposition:
+          primitives: [intentionality, identity, composition]
+          formula: "→m ∧ ≡(input) → ⊏"
+          confidence: 0.65
+        canonical: true
+
+      - id: PM_002
+        name: "class"
+        description: "Extension of a propositional function"
+        decomposition:
+          primitives: [composition, identity]
+          formula: "⊏ ∧ ≡(membership)"
+          confidence: 0.7
+        canonical: true
+
+      - id: PM_003
+        name: "type"
+        description: "Level in the type hierarchy"
+        decomposition:
+          primitives: [composition, quantity]
+          formula: "⊏(levels) ∧ #"
+          confidence: 0.6
+        canonical: true
+
+      - id: PM_004
+        name: "definite_description"
+        description: "The unique x such that φ(x)"
+        decomposition:
+          primitives: [existence, identity, quantity]
+          formula: "∃! = ∃ ∧ ≡ ∧ #(1)"
+          confidence: 0.8
+        canonical: true
+
+      - id: PM_005
+        name: "material_implication"
+        description: "p ⊃ q"
+        decomposition:
+          primitives: [negation, possibility]
+          formula: "¬p ∨ q = ¬(p ∧ ¬q)"
+          confidence: 0.9
+        canonical: true
+
+  # ============================================================================
+  # TARSKI'S SEMANTICS (1933-1944)
+  # Truth and semantic concepts
+  # ============================================================================
+  tarski_semantics:
+    source: "Tarski, On Truth"
+    weight: 0.9
+
+    concepts:
+      - id: TA_001
+        name: "satisfaction"
+        description: "An assignment satisfies a formula"
+        decomposition:
+          primitives: [intentionality, existence, identity]
+          formula: "→m(assignment) ∧ ∃ ∧ ≡(correspondence)"
+          confidence: 0.75
+        canonical: true
+
+      - id: TA_002
+        name: "truth_in_model"
+        description: "A sentence is true in a model"
+        decomposition:
+          primitives: [intentionality, existence]
+          derived: [truth]
+          formula: "→m ∧ ∃(satisfaction)"
+          confidence: 0.85
+        canonical: true
+
+      - id: TA_003
+        name: "logical_consequence"
+        description: "φ follows from Γ"
+        decomposition:
+          primitives: [possibility, negation, composition]
+          derived: [necessity]
+          formula: "¬◇(Γ ∧ ¬φ)"
+          confidence: 0.85
+        canonical: true
+
+      - id: TA_004
+        name: "definability"
+        description: "A set is definable in a language"
+        decomposition:
+          primitives: [intentionality, identity, composition]
+          formula: "∃(→m) ∧ ≡(extension)"
+          confidence: 0.7
+        canonical: true
+
+  # ============================================================================
+  # MODAL LOGIC CONCEPTS (Kripke, Lewis)
+  # ============================================================================
+  modal_logic:
+    source: "Kripke/Lewis, Modal Logic"
+    weight: 0.85
+
+    concepts:
+      - id: ML_001
+        name: "possible_world"
+        description: "A maximal consistent state of affairs"
+        decomposition:
+          primitives: [possibility, existence, composition]
+          formula: "◇ ∧ ∃ ∧ ⊏(maximal)"
+          confidence: 0.8
+        canonical: true
+
+      - id: ML_002
+        name: "accessibility"
+        description: "Relation between possible worlds"
+        decomposition:
+          primitives: [possibility, adjacency]
+          formula: "◇ ∧ ⊣(worlds)"
+          confidence: 0.75
+        canonical: true
+
+      - id: ML_003
+        name: "rigid_designator"
+        description: "A term denoting the same object in all worlds"
+        decomposition:
+          primitives: [identity, possibility, negation]
+          derived: [necessity]
+          formula: "≡ ∧ ¬◇¬(≡)"
+          confidence: 0.8
+        canonical: true
+
+      - id: ML_004
+        name: "counterpart"
+        description: "The representative of an object in another world"
+        decomposition:
+          primitives: [identity, possibility, quality]
+          formula: "≡(similarity) ∧ ◇ ∧ Q(maximal)"
+          confidence: 0.7
+        canonical: true
+
+      - id: ML_005
+        name: "essential_property"
+        description: "A property an object has necessarily"
+        decomposition:
+          primitives: [quality, possibility, negation]
+          derived: [necessity]
+          formula: "Q ∧ ¬◇¬Q"
+          confidence: 0.85
+        canonical: true
+
+  # ============================================================================
+  # MEREOLOGY (Lesniewski, Goodman)
+  # Part-whole relations
+  # ============================================================================
+  mereology:
+    source: "Lesniewski/Goodman, Mereology"
+    weight: 0.8
+
+    concepts:
+      - id: ME_001
+        name: "proper_part"
+        description: "x is part of y and x ≠ y"
+        decomposition:
+          primitives: [composition, negation, identity]
+          formula: "⊏ ∧ ¬≡"
+          confidence: 0.95
+        canonical: true
+
+      - id: ME_002
+        name: "overlap"
+        description: "x and y share a common part"
+        decomposition:
+          primitives: [composition, existence]
+          formula: "∃z(⊏(z,x) ∧ ⊏(z,y))"
+          confidence: 0.9
+        canonical: true
+
+      - id: ME_003
+        name: "fusion"
+        description: "The sum of all φ-ers"
+        decomposition:
+          primitives: [composition, quantity]
+          formula: "⊏(all) ∧ #(sum)"
+          confidence: 0.8
+        canonical: true
+
+      - id: ME_004
+        name: "atom"
+        description: "Something with no proper parts"
+        decomposition:
+          primitives: [existence, composition, negation]
+          formula: "∃ ∧ ¬∃(⊏_proper)"
+          confidence: 0.9
+        canonical: true
+
+      - id: ME_005
+        name: "scattered_object"
+        description: "An object whose parts are not all connected"
+        decomposition:
+          primitives: [composition, adjacency, negation]
+          formula: "⊏ ∧ ¬(⊣_all_parts)"
+          confidence: 0.85
+        canonical: true
+
+  # ============================================================================
+  # DEONTIC LOGIC (von Wright)
+  # Normative concepts
+  # ============================================================================
+  deontic_logic:
+    source: "von Wright, Deontic Logic"
+    weight: 0.85
+
+    concepts:
+      - id: DE_001
+        name: "obligation"
+        description: "What ought to be done"
+        decomposition:
+          primitives: [normativity, possibility, negation]
+          formula: "⊨ ∧ ¬◇¬(action)"
+          confidence: 0.85
+        canonical: true
+
+      - id: DE_002
+        name: "permission"
+        description: "What may be done"
+        decomposition:
+          primitives: [normativity, possibility]
+          formula: "⊨ ∧ ◇(action)"
+          confidence: 0.9
+        canonical: true
+
+      - id: DE_003
+        name: "prohibition"
+        description: "What must not be done"
+        decomposition:
+          primitives: [normativity, possibility, negation]
+          formula: "⊨ ∧ ¬◇(action)"
+          confidence: 0.9
+        canonical: true
+
+      - id: DE_004
+        name: "supererogation"
+        description: "Beyond the call of duty"
+        decomposition:
+          primitives: [normativity, quality, negation]
+          derived: [valence]
+          formula: "(Q ∧ ⊨)_positive ∧ ¬(⊨_required)"
+          confidence: 0.75
+        canonical: true
+
+  # ============================================================================
+  # TEMPORAL LOGIC (Prior)
+  # ============================================================================
+  temporal_logic:
+    source: "Prior, Temporal Logic"
+    weight: 0.8
+
+    concepts:
+      - id: TL_001
+        name: "past"
+        description: "It was the case that"
+        decomposition:
+          primitives: [succession, existence]
+          formula: "≺(now) ∧ ∃"
+          confidence: 0.9
+        canonical: true
+
+      - id: TL_002
+        name: "future"
+        description: "It will be the case that"
+        decomposition:
+          primitives: [succession, existence]
+          formula: "now ≺ _ ∧ ∃"
+          confidence: 0.9
+        canonical: true
+
+      - id: TL_003
+        name: "always"
+        description: "At all times"
+        decomposition:
+          primitives: [succession, negation, possibility]
+          formula: "¬∃(≺) s.t. ¬"
+          confidence: 0.8
+        canonical: true
+
+      - id: TL_004
+        name: "sometimes"
+        description: "At some time"
+        decomposition:
+          primitives: [succession, existence, possibility]
+          formula: "∃(≺) ∧ ◇"
+          confidence: 0.85
+        canonical: true
+
+      - id: TL_005
+        name: "until"
+        description: "p until q"
+        decomposition:
+          primitives: [succession, existence]
+          formula: "≺(q) → ∃(p)"
+          confidence: 0.8
+        canonical: true
+
+  # ============================================================================
+  # INFORMATION THEORY (Shannon)
+  # ============================================================================
+  information_theory:
+    source: "Shannon, Information Theory"
+    weight: 0.7
+
+    concepts:
+      - id: IT_001
+        name: "information"
+        description: "Reduction of uncertainty"
+        decomposition:
+          primitives: [possibility, negation, quantity]
+          formula: "¬◇(alternatives) ∧ #(bits)"
+          confidence: 0.7
+        canonical: true
+
+      - id: IT_002
+        name: "entropy"
+        description: "Expected information content"
+        decomposition:
+          primitives: [possibility, quantity]
+          formula: "Σ(◇ × #(log))"
+          confidence: 0.65
+        canonical: true
+        note: "Mathematical definition may exceed alphabet"
+
+      - id: IT_003
+        name: "redundancy"
+        description: "Information beyond minimum needed"
+        decomposition:
+          primitives: [quantity, composition, negation]
+          formula: "#(actual) - #(minimum)"
+          confidence: 0.7
+        canonical: true
+
+  # ============================================================================
+  # CHALLENGE CORPUS - Concepts that may expose alphabet limitations
+  # These require primitives not yet in the alphabet
+  # ============================================================================
+  challenge_concepts:
+    source: "Challenge Corpus - Frontier Concepts"
+    weight: 0.5  # Lower weight since these are expected to have gaps
+
+    concepts:
+      # -- Phenomenology (may need qualia/phenomenality primitive) --
+      - id: CH_001
+        name: "qualia"
+        description: "The subjective, experiential properties of sensations"
+        decomposition:
+          primitives: [phenomenality, quality]  # phenomenality not in alphabet
+          formula: "PHEN ∧ Q"
+          confidence: 0.6
+        canonical: true
+        note: "May require phenomenality primitive"
+
+      - id: CH_002
+        name: "consciousness"
+        description: "The state of being aware of and responsive to surroundings"
+        decomposition:
+          primitives: [phenomenality, intentionality, existence]
+          formula: "PHEN ∧ →m ∧ ∃"
+          confidence: 0.65
+        canonical: true
+
+      - id: CH_003
+        name: "pain"
+        description: "A phenomenal experience with negative valence"
+        decomposition:
+          primitives: [phenomenality, quality, normativity]
+          derived: [valence]
+          formula: "PHEN ∧ (Q ∧ ⊨)_negative"
+          confidence: 0.7
+        canonical: true
+
+      # -- Self-Reference (may need reflexivity primitive) --
+      - id: CH_004
+        name: "self"
+        description: "The subject as aware of itself"
+        decomposition:
+          primitives: [reflexivity, identity, intentionality]
+          formula: "REFL ∧ ≡ ∧ →m"
+          confidence: 0.6
+        canonical: true
+        note: "May require reflexivity primitive"
+
+      - id: CH_005
+        name: "autobiography"
+        description: "Narrative self-constitution through time"
+        decomposition:
+          primitives: [reflexivity, succession, intentionality, composition]
+          formula: "REFL ∧ ≺ ∧ →m ∧ ⊏"
+          confidence: 0.55
+        canonical: true
+
+      - id: CH_006
+        name: "recursion"
+        description: "Self-referential structure or process"
+        decomposition:
+          primitives: [reflexivity, composition, identity]
+          formula: "REFL ∧ ⊏ ∧ ≡"
+          confidence: 0.7
+        canonical: true
+
+      # -- Social Ontology (may need collectivity primitive) --
+      - id: CH_007
+        name: "collective_intention"
+        description: "A shared intention held by a group"
+        decomposition:
+          primitives: [collectivity, intentionality, identity]
+          formula: "COLL ∧ →m ∧ ≡(shared)"
+          confidence: 0.6
+        canonical: true
+        note: "May require collectivity primitive"
+
+      - id: CH_008
+        name: "institution"
+        description: "Persistent social structure with rules"
+        decomposition:
+          primitives: [collectivity, normativity, succession, composition]
+          formula: "COLL ∧ ⊨ ∧ ≺ ∧ ⊏"
+          confidence: 0.55
+        canonical: true
+
+      - id: CH_009
+        name: "money"
+        description: "Collectively accepted medium of exchange"
+        decomposition:
+          primitives: [collectivity, intentionality, quantity, normativity]
+          formula: "COLL ∧ →m ∧ # ∧ ⊨"
+          confidence: 0.5
+        canonical: true
+
+      # -- Linguistic (may need symbol/representation primitive) --
+      - id: CH_010
+        name: "symbol"
+        description: "Something that stands for something else by convention"
+        decomposition:
+          primitives: [representation, identity, intentionality]
+          formula: "REP ∧ ≡(stands-for) ∧ →m"
+          confidence: 0.65
+        canonical: true
+        note: "May require representation primitive"
+
+      - id: CH_011
+        name: "meaning"
+        description: "Semantic content of an expression"
+        decomposition:
+          primitives: [representation, intentionality, quality]
+          formula: "REP ∧ →m ∧ Q(content)"
+          confidence: 0.6
+        canonical: true
+
+      - id: CH_012
+        name: "grammar"
+        description: "Rules for combining symbols"
+        decomposition:
+          primitives: [representation, composition, normativity]
+          formula: "REP ∧ ⊏(rules) ∧ ⊨"
+          confidence: 0.55
+        canonical: true
+
+      # -- Aesthetic (may need beauty primitive) --
+      - id: CH_013
+        name: "beauty"
+        description: "Quality that gives aesthetic pleasure"
+        decomposition:
+          primitives: [aesthetic_value, quality, normativity]
+          formula: "AESTH ∧ Q ∧ ⊨"
+          confidence: 0.5
+        canonical: true
+        note: "May require aesthetic_value primitive"
+
+      - id: CH_014
+        name: "sublime"
+        description: "That which inspires awe through vastness or power"
+        decomposition:
+          primitives: [aesthetic_value, quantity, phenomenality]
+          formula: "AESTH ∧ #(vast) ∧ PHEN"
+          confidence: 0.45
+        canonical: true
+
+      # -- Causal/Process (tests limits of current causation derivation) --
+      - id: CH_015
+        name: "emergence"
+        description: "Properties arising from but not reducible to parts"
+        decomposition:
+          primitives: [composition, quality, negation, identity]
+          formula: "⊏ ∧ Q(whole) ∧ ¬(Q(parts) → Q(whole))"
+          confidence: 0.6
+        canonical: true
+
+      - id: CH_016
+        name: "feedback"
+        description: "Circular causal process"
+        decomposition:
+          primitives: [succession, reflexivity, composition]
+          derived: [causation]
+          formula: "(≺ + ◇¬) ∧ REFL ∧ ⊏"
+          confidence: 0.65
+        canonical: true
+
+# =============================================================================
+# CORPUS METADATA
+# =============================================================================
+metadata:
+  total_concepts: 73
+  sources: 11
+  domains:
+    - metaphysics
+    - epistemology
+    - logic
+    - semantics
+    - modality
+    - mereology
+    - ethics
+    - time
+    - information
+    - phenomenology
+    - social
+    - linguistics
+    - aesthetics
+
+  coverage_weights:
+    aristotle_categories: 0.18
+    kant_categories: 0.18
+    frege_foundations: 0.12
+    principia_mathematica: 0.08
+    tarski_semantics: 0.08
+    modal_logic: 0.08
+    mereology: 0.05
+    deontic_logic: 0.05
+    temporal_logic: 0.03
+    information_theory: 0.02
+    challenge_concepts: 0.13  # Stretch goals for the alphabet

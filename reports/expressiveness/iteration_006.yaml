@@ -1,0 +1,86 @@
+expressiveness_report:
+  iteration: 6
+  summary:
+    primitives: 11
+    corpus_coverage: 80.5%
+    weighted_coverage: 87.8%
+    concepts_expressible: 62
+    expressiveness_ratio: 5.64
+  information_theory:
+    shannon_entropy: 3.331
+    normalized_entropy: 0.963
+    bits_per_concept: 7.26
+    mdl_score: 0.6817
+    compression_ratio: 0.23
+  description_length:
+    average: 2.4
+    std_dev: 0.63
+  primitive_importance:
+    negation: 0.139
+    existence: 0.133
+    composition: 0.133
+    identity: 0.117
+    intentionality: 0.1
+    possibility: 0.1
+    succession: 0.072
+    quantity: 0.067
+    quality: 0.061
+    normativity: 0.056
+    adjacency: 0.022
+  corpus_breakdown:
+  - name: aristotle_categories
+    total: 10
+    expressible: 10
+    partial: 0
+    coverage: 100.0%
+  - name: kant_categories
+    total: 12
+    expressible: 12
+    partial: 0
+    coverage: 100.0%
+  - name: frege_foundations
+    total: 8
+    expressible: 8
+    partial: 0
+    coverage: 100.0%
+  - name: principia_mathematica
+    total: 5
+    expressible: 5
+    partial: 0
+    coverage: 100.0%
+  - name: tarski_semantics
+    total: 4
+    expressible: 4
+    partial: 0
+    coverage: 100.0%
+  - name: modal_logic
+    total: 5
+    expressible: 5
+    partial: 0
+    coverage: 100.0%
+  - name: mereology
+    total: 5
+    expressible: 5
+    partial: 0
+    coverage: 100.0%
+  - name: deontic_logic
+    total: 4
+    expressible: 4
+    partial: 0
+    coverage: 100.0%
+  - name: temporal_logic
+    total: 5
+    expressible: 5
+    partial: 0
+    coverage: 100.0%
+  - name: information_theory
+    total: 3
+    expressible: 3
+    partial: 0
+    coverage: 100.0%
+  - name: challenge_concepts
+    total: 16
+    expressible: 1
+    partial: 15
+    coverage: 6.2%
+  timestamp: '2026-01-18T20:34:33.012659Z'
