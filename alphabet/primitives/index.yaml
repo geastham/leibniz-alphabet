@@ -1,15 +1,16 @@
 alphabet_index:
   version: "1.0.0"
-  last_updated: "2026-01-18T15:51:30"
-  iteration: 0
+  last_updated: "2026-01-18T15:58:54"
+  iteration: 1
 
   statistics:
-    total_primitives: 2
+    total_primitives: 4
     by_domain:
       being: 1
-      relation: 1
+      relation: 2
+      time: 1
     by_status:
-      stable: 2
+      stable: 4
       recent: 0
       contested: 0
 
@@ -22,6 +23,7 @@ alphabet_index:
       brief_definition: "The bare fact that something IS rather than is not; the positive presence of being as opposed to nothingness."
       status: stable
       added_iteration: 0
+
     - id: P002
       label: identity
       domain: relation
@@ -30,3 +32,21 @@ alphabet_index:
       brief_definition: "The relation that each thing bears to itself and to nothing else; that a thing is the same as itself."
       status: stable
       added_iteration: 0
+
+    - id: P003
+      label: negation
+      domain: relation
+      symbol: "¬"
+      prime: 5
+      brief_definition: "The logical operation that reverses truth value; the concept of NOT. Negation enables expressing absence, difference, and falsity."
+      status: stable
+      added_iteration: 1
+
+    - id: P004
+      label: succession
+      domain: time
+      symbol: "≺"
+      prime: 7
+      brief_definition: "The temporal relation of one moment coming after another; the before/after relation that structures time."
+      status: stable
+      added_iteration: 1

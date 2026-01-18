@@ -1,8 +1,8 @@
 iteration_state:
-  current_iteration: 1
+  current_iteration: 2
   phase: EXPANSION
   cycle_in_phase: 0
-  last_updated: "2026-01-18T15:51:43"
+  last_updated: "2026-01-18T15:59:00"
 
   current_strategy:
     proposer_mode: DOMAIN_SWEEP
@@ -20,7 +20,7 @@ iteration_state:
     candidates_to_revise: []
     conflicts_to_resolve: []
     gaps_to_fill:
-      - "NEGATION - revealed as candidate by rejection of 'difference'"
+      - "MODALITY (possibility/necessity) - revealed by rejection of causation"
 
   metrics:
     recent_acceptance_rate: 0.67
@@ -33,6 +33,6 @@ iteration_state:
     iterations_since_primitive: 0
 
   history:
-    total_proposed: 3
-    total_accepted: 2
-    total_rejected: 1
+    total_proposed: 6
+    total_accepted: 4
+    total_rejected: 2

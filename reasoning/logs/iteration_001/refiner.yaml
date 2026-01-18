@@ -1,0 +1,36 @@
+timestamp: '2026-01-18T15:58:54.718781'
+role: REFINER
+iteration: 1
+integrated_primitive:
+  id: P004
+  label: succession
+  domain: time
+  symbol: "\u227A"
+  prime_number: 7
+  definition:
+    informal: The temporal relation of one moment or event coming after another; the
+      before/after relation that structures time as an ordered sequence. Succession
+      is the skeleton of time itself.
+    formal: null
+  examples:
+    ostensive:
+    - Monday comes before Tuesday
+    - The flash preceded the thunder
+    - Birth precedes death
+    negative:
+    - Succession is not causation - before doesn't imply because
+    - Succession is not spatial ordering
+    - Succession is not duration
+  relationships:
+    contrasts_with: []
+    presupposes:
+    - P001
+    - P002
+    composes_well_with:
+    - P001
+    - P003
+    similar_to: []
+  confidence: 0.88
+  status: stable
+  notes: 'Fourth primitive. Opens the temporal dimension. Now we can express change:
+    something exists, then something different exists.'

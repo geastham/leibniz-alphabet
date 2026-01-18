@@ -1,0 +1,177 @@
+timestamp: '2026-01-18T15:57:20.409616'
+role: CRITIC
+evaluations:
+- candidate_label: negation
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as truth-value reversal
+      result: Circular - 'false' IS negation of true.
+      survived: true
+    - approach: synthetic
+      attempt: Break into absence + opposition
+      result: Fails - both presuppose negation.
+      survived: true
+    - approach: functional
+      attempt: Define as what NOT does
+      result: Just ostension, not decomposition.
+      survived: true
+    survived: true
+    notes: Every attempt uses NOT or synonyms. True primitive.
+  circularity:
+    concepts_traced:
+    - not
+    - denial
+    - absence
+    - lack
+    - without
+    circular_paths: []
+    survived: true
+    notes: All traced concepts ARE negation. Acceptable.
+  redundancy:
+    can_be_expressed: false
+    using_primitives:
+    - existence
+    - identity
+    notes: Cannot say 'not-X' using only existence and identity.
+  edge_cases:
+    cases_found:
+    - case: Double negation
+      severity: low
+    overall_severity: low
+    notes: Edge cases concern logic OF negation, not the concept.
+  cultural_variance:
+    evidence_for_universality:
+    - All languages have negation markers
+    - Infants understand 'no' early
+    evidence_against: []
+    assessment: universal
+    notes: Most universal logical concept.
+  parsimony:
+    expressiveness_value: essential
+    necessary: true
+    notes: Unlocks difference, non-existence, falsity, absence.
+  verdict: ACCEPT
+  confidence: 0.95
+  reasoning_summary: Negation is demonstrably primitive. Every definition circular.
+    Essential for logical expressiveness.
+  key_insight: 'Completes basic toolkit: existence (IS), identity (ITSELF), negation
+    (NOT).'
+  candidate_id: CAND_001_00
+- candidate_label: causation
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as regular succession (Hume)
+      result: Partial success but 'regular' is causal.
+      survived: false
+    - approach: synthetic
+      attempt: Break into temporal priority + counterfactual dependence
+      result: Promising - may reduce to succession + negation + modality.
+      survived: false
+    - approach: functional
+      attempt: Define as physical quantity transmission
+      result: '''Transmits'' is causal language.'
+      survived: true
+    survived: false
+    notes: Counterfactual analysis may succeed. Causation might not be primitive.
+  circularity:
+    concepts_traced:
+    - produces
+    - brings about
+    - because
+    circular_paths:
+    - "causation \u2192 produces \u2192 causation"
+    survived: true
+    notes: Ordinary definitions circular, but counterfactual avoids this.
+  redundancy:
+    can_be_expressed: true
+    using_primitives:
+    - succession
+    - negation
+    - MODALITY
+    notes: "C causes E \u2261 C \u227A E \u2227 \u25A1(\xACC \u2192 \xACE). Needs\
+      \ modality, not causation."
+  edge_cases:
+    cases_found:
+    - case: Overdetermination
+      severity: medium
+    - case: Preemption
+      severity: high
+    overall_severity: high
+    notes: Severe edge cases challenge all analyses.
+  cultural_variance:
+    evidence_for_universality:
+    - All cultures recognize causal relations
+    evidence_against: []
+    assessment: universal
+    notes: Universal but not primitive.
+  parsimony:
+    expressiveness_value: high
+    necessary: false
+    notes: Should add MODALITY as primitive instead.
+  verdict: REJECT
+  confidence: 0.7
+  reasoning_summary: Causation may reduce to succession + negation + modality. Propose
+    MODALITY instead.
+  key_insight: Reveals MODALITY as likely primitive.
+  candidate_id: CAND_001_01
+- candidate_label: succession
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as causal ordering
+      result: Fails - causation presupposes time, not vice versa.
+      survived: true
+    - approach: synthetic
+      attempt: Break into moments + ordering
+      result: Just renaming succession.
+      survived: true
+    - approach: functional
+      attempt: Define as what clocks measure
+      result: Circular - clocks work BY tracking succession.
+      survived: true
+    survived: true
+    notes: Before/after relation resists elimination.
+  circularity:
+    concepts_traced:
+    - before
+    - after
+    - earlier
+    - later
+    - prior
+    circular_paths: []
+    survived: true
+    notes: All ARE succession. Acceptable primitive circularity.
+  redundancy:
+    can_be_expressed: false
+    using_primitives:
+    - existence
+    - identity
+    - negation
+    notes: Current alphabet lacks temporal dimension.
+  edge_cases:
+    cases_found:
+    - case: Relativity - observer-relative?
+      severity: medium
+    - case: Simultaneous events
+      severity: low
+    overall_severity: medium
+    notes: Challenge theory of time, not primitiveness.
+  cultural_variance:
+    evidence_for_universality:
+    - All languages have temporal markers
+    - Narrative structure universal
+    evidence_against: []
+    assessment: universal
+    notes: Fundamental to human cognition.
+  parsimony:
+    expressiveness_value: essential
+    necessary: true
+    notes: Opens temporal dimension. Enables expressing change.
+  verdict: ACCEPT
+  confidence: 0.88
+  reasoning_summary: Succession survives all attacks. Irreducible, universal, essential
+    for time.
+  key_insight: 'With existence, identity, negation, succession: change becomes expressible.'
+  candidate_id: CAND_001_02
