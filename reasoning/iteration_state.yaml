@@ -1,8 +1,8 @@
 iteration_state:
-  current_iteration: 6
+  current_iteration: 7
   phase: EXPANSION
   cycle_in_phase: 0
-  last_updated: "2026-01-18T19:43:00"
+  last_updated: "2026-01-18T20:15:00"
 
   current_strategy:
     proposer_mode: DOMAIN_SWEEP
@@ -20,22 +20,24 @@ iteration_state:
     candidates_to_revise: []
     conflicts_to_resolve: []
     gaps_to_fill:
-      - "Approaching completeness - most new candidates derivable"
+      - "Social domain still empty - but alterity now derivable from phenomenality"
+      - "Consider: self/reflexivity as potential primitive"
+      - "Near completeness - most new candidates prove derivable"
 
   metrics:
-    recent_acceptance_rate: 0.61
+    recent_acceptance_rate: 0.33
     coverage_score: 0.0
     consistency_score: 1.0
 
   triggers:
     meta_reflection_due: false
-    iterations_since_meta: 0
+    iterations_since_meta: 1
     iterations_since_primitive: 0
 
   history:
-    total_proposed: 18
-    total_accepted: 11
-    total_rejected: 5
+    total_proposed: 21
+    total_accepted: 12
+    total_rejected: 7
     total_refined: 2
 
   derived_concepts:
@@ -57,3 +59,9 @@ iteration_state:
     - name: "valence"
       derivation: "quality + normativity (quality with normative polarity)"
       iteration_derived: 5
+    - name: "alterity"
+      derivation: "intentionality(phenomenality in negation(self-identity))"
+      iteration_derived: 6
+    - name: "awareness"
+      derivation: "phenomenality + intentionality (phenomenal intentionality)"
+      iteration_derived: 6
