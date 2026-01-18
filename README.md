@@ -14,9 +14,9 @@
 
 **An Autonomous Reasoning System Constructing the Alphabet of Human Thought**
 
-[![Status](https://img.shields.io/badge/Status-Active%20Development-blueviolet?style=for-the-badge)]()
+[![Status](https://img.shields.io/badge/Status-Approaching%20Completeness-green?style=for-the-badge)]()
 [![Primitives](https://img.shields.io/badge/Primitives-12-gold?style=for-the-badge)]()
-[![Iterations](https://img.shields.io/badge/Iterations-7-teal?style=for-the-badge)]()
+[![Iterations](https://img.shields.io/badge/Iterations-8-teal?style=for-the-badge)]()
 
 ---
 
@@ -224,7 +224,7 @@ reasoning_entry:
 ### Iteration Progress
 
 ```
-Iteration  7  ████████████████████░░░░░░░░░░░░░░░░░░░░  Approaching Completeness
+Iteration  8  ██████████████████████████░░░░░░░░░░░░░░  CONVERGENCE PHASE
 ```
 
 ### Alphabet Composition
@@ -240,7 +240,7 @@ Iteration  7  ████████████████████░░
 | Ethics | 1 (normativity) | ✅ Complete |
 | **TOTAL** | **12** | |
 
-### Derived Concepts (11)
+### Derived Concepts (14)
 
 | Concept | Derivation |
 |---------|------------|
@@ -255,12 +255,15 @@ Iteration  7  ████████████████████░░
 | Reflexivity | intentionality(bearer-of-phenomenality) |
 | Signification | shared normative intentionality |
 | Force | quality + possibility + causation |
+| Indeterminacy | possibility + ¬causation |
+| Continuity | ¬∃(composition-minima) |
+| Similarity | identity(quality(X), quality(Y)) |
 
 ### Coverage Metrics
 
 ```
-Acceptance Rate:       50%  ██████████░░░░░░░░░░  12/24 candidates
-Recent Acceptance:      0%  ░░░░░░░░░░░░░░░░░░░░  0/3 (iteration 7)
+Acceptance Rate:       44%  █████████░░░░░░░░░░░  12/27 candidates
+Recent Acceptance:      0%  ░░░░░░░░░░░░░░░░░░░░  0/6 (iterations 7-8)
 Consistency Score:    100%  ████████████████████  No contradictions
 ```
 
