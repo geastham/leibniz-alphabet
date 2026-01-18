@@ -1,14 +1,32 @@
 alphabet_index:
   version: "1.0.0"
-  last_updated: null
+  last_updated: "2026-01-18T15:51:30"
   iteration: 0
 
   statistics:
-    total_primitives: 0
-    by_domain: {}
+    total_primitives: 2
+    by_domain:
+      being: 1
+      relation: 1
     by_status:
-      stable: 0
+      stable: 2
       recent: 0
       contested: 0
 
-  primitives: []
+  primitives:
+    - id: P001
+      label: existence
+      domain: being
+      symbol: "∃"
+      prime: 2
+      brief_definition: "The bare fact that something IS rather than is not; the positive presence of being as opposed to nothingness."
+      status: stable
+      added_iteration: 0
+    - id: P002
+      label: identity
+      domain: relation
+      symbol: "≡"
+      prime: 3
+      brief_definition: "The relation that each thing bears to itself and to nothing else; that a thing is the same as itself."
+      status: stable
+      added_iteration: 0

@@ -1,0 +1,26 @@
+id: P001
+label: existence
+domain: being
+symbol: "\u2203"
+prime_number: 2
+definition:
+  informal: The bare fact that something IS rather than is not; the positive presence
+    of being as opposed to nothingness. Existence is the ground-floor concept - the
+    precondition for anything to have any properties at all.
+  formal: null
+examples:
+  ostensive:
+  - This rock exists - it is here, present, real
+  - The number 7 exists as a mathematical object
+  - My pain right now exists - it is occurring
+  negative:
+  - A married bachelor does not exist - logically impossible
+  - Phlogiston turned out not to exist - mistaken posit
+relationships:
+  contrasts_with: []
+  presupposes: []
+  composes_well_with: []
+  similar_to: []
+confidence: 0.95
+status: stable
+notes: First primitive. Foundation upon which all other concepts rest.
