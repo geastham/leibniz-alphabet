@@ -160,12 +160,94 @@ python tools/session_runner.py --save-primitive "YOUR_YAML"
 
 3. Write narrative log to `reasoning/logs/iteration_XXX/narrative.md`
 
-4. Commit and push:
+4. **Run expressiveness metrics** (see below)
+
+5. Commit and push:
 ```bash
 git add -A
 git commit -m "Execute iteration X: [summary of what was added/rejected]"
 git push
 ```
+
+---
+
+## Expressiveness Metrics
+
+After each iteration, run expressiveness analysis to measure alphabet coverage:
+
+### Quick Analysis
+```bash
+# Run full analysis (shows coverage, entropy, gaps)
+python tools/expressiveness.py analyze --detailed
+
+# Show encoding table (how concepts map to symbols)
+python tools/expressiveness.py encodings
+
+# Show gaps (what primitives are missing)
+python tools/expressiveness.py gaps
+
+# Generate and save iteration report
+python tools/expressiveness.py report
+```
+
+### Key Metrics Tracked
+
+| Metric | Description | Target |
+|--------|-------------|--------|
+| **Corpus Coverage** | % of 77 canonical concepts expressible | >90% |
+| **Weighted Coverage** | Coverage weighted by source importance | >90% |
+| **Challenge Coverage** | % of frontier concepts expressible | Track growth |
+| **Shannon Entropy** | Information uniformity of primitive usage | Higher = better |
+| **MDL Score** | Encoding efficiency (Minimum Description Length) | Higher = better |
+| **Expressiveness Ratio** | Concepts per primitive | Higher = more powerful |
+| **Bits per Concept** | Average log₂(prime_product) | Lower = simpler |
+
+### Metrics History
+
+View historical metrics across iterations:
+```bash
+cat reports/expressiveness/history.yaml
+```
+
+Each iteration's metrics are stored in:
+- `reports/expressiveness/iteration_XXX.yaml` - Full metrics report
+- `reports/expressiveness/iteration_XXX_encodings.md` - Symbol encoding table
+- `reports/expressiveness/history.yaml` - Time series of key metrics
+
+### Canonical Corpus
+
+The corpus includes concepts from:
+- **Aristotle's Categories** (10 concepts)
+- **Kant's Categories** (12 concepts)
+- **Frege's Foundations** (8 concepts)
+- **Principia Mathematica** (5 concepts)
+- **Tarski's Semantics** (4 concepts)
+- **Modal Logic** (5 concepts)
+- **Mereology** (5 concepts)
+- **Deontic Logic** (4 concepts)
+- **Temporal Logic** (5 concepts)
+- **Information Theory** (3 concepts)
+- **Challenge Corpus** (16 frontier concepts)
+
+### Using Metrics to Guide Iterations
+
+1. **Check gaps** before PROPOSER phase:
+   ```bash
+   python tools/expressiveness.py gaps
+   ```
+   This shows which primitives would most improve coverage.
+
+2. **After each iteration**, metrics run automatically when using the loop engine, or manually:
+   ```bash
+   python tools/expressiveness.py report
+   ```
+
+3. **Current gaps** (as of iteration 6):
+   - `phenomenality` - needed for qualia, consciousness, pain
+   - `reflexivity` - needed for self, recursion, feedback
+   - `collectivity` - needed for institutions, collective intention
+   - `representation` - needed for symbol, meaning, grammar
+   - `aesthetic_value` - needed for beauty, sublime
 
 ## Key Principles
 

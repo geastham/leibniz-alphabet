@@ -57,8 +57,10 @@ class PrimitiveIndexEntry(BaseModel):
     domain: Domain
     status: PrimitiveStatus
     added_iteration: int
-    last_reviewed: int
-    confidence: float = Field(ge=0.0, le=1.0)
+    last_reviewed: int = 0  # Default to 0 if not specified
+    confidence: float = Field(default=0.9, ge=0.0, le=1.0)
+    symbol: str = ""  # Unicode symbol for the primitive
+    brief_definition: str = ""  # Short description
 
 
 class Definition(BaseModel):

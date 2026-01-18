@@ -1,0 +1,27 @@
+# Expressiveness Metrics History
+# ================================
+# Tracks metrics across iterations to show alphabet evolution.
+# Updated automatically at end of each iteration.
+
+history:
+  - iteration: 6
+    timestamp: "2026-01-18T20:34:33Z"
+    primitives: 11
+    corpus_coverage: 0.805
+    weighted_coverage: 0.878
+    concepts_expressible: 62
+    shannon_entropy: 3.331
+    normalized_entropy: 0.963
+    bits_per_concept: 7.26
+    mdl_score: 0.6817
+    expressiveness_ratio: 5.64
+    challenge_coverage: 0.062
+    notes: "Added expressiveness metrics system. Challenge corpus exposes gaps: phenomenality, reflexivity, collectivity, representation."
+
+# Key metrics to track:
+#   - corpus_coverage: % of canonical concepts fully expressible
+#   - weighted_coverage: coverage weighted by source importance
+#   - challenge_coverage: % of frontier/stretch concepts expressible
+#   - shannon_entropy: information density of primitive usage (higher = more uniform)
+#   - mdl_score: encoding efficiency (higher = more efficient)
+#   - expressiveness_ratio: concepts expressible per primitive (higher = more powerful)
