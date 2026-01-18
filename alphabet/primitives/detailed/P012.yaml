@@ -1,0 +1,36 @@
+id: P012
+label: phenomenality
+domain: mind
+symbol: "\u2609"
+prime_number: 37
+definition:
+  informal: The qualitative, experiential character of conscious states - what it
+    is LIKE to have an experience. The felt quality of being a subject, irreducible
+    to functional, representational, or informational descriptions.
+  formal: null
+examples:
+  ostensive:
+  - The redness of seeing red (not the wavelength, but the felt quality)
+  - The painfulness of pain (not the signal, but the suffering)
+  - The taste experience of coffee (not the chemistry, but the flavor-feel)
+  - The felt difference between imagining and perceiving
+  negative:
+  - Information processing without experience (a thermostat detects temperature but has no phenomenality)
+  - Functional roles alone (a zombie could have identical functions without phenomenality)
+  - Behavioral dispositions (what it does vs what it's like)
+relationships:
+  contrasts_with:
+  - P007
+  presupposes:
+  - P001
+  composes_well_with:
+  - P007
+  - P008
+  - P011
+  similar_to: []
+confidence: 0.9
+status: stable
+notes: Twelfth primitive. Opens the phenomenal/experiential dimension. The hard problem
+  of consciousness is hard precisely because phenomenality resists reduction. With
+  phenomenality, we can derive awareness (phenomenality + intentionality) and alterity
+  (intentionality toward phenomenality in non-self).

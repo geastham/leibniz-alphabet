@@ -1,20 +1,20 @@
 alphabet_index:
   version: "1.0.0"
-  last_updated: "2026-01-18T19:42:35"
-  iteration: 5
+  last_updated: "2026-01-18T21:45:00"
+  iteration: 9
 
   statistics:
-    total_primitives: 11
+    total_primitives: 12
     by_domain:
       being: 2
       relation: 3
       time: 1
       space: 1
-      mind: 1
+      mind: 2
       quality: 2
       ethics: 1
     by_status:
-      stable: 11
+      stable: 12
       recent: 0
       contested: 0
 
@@ -117,3 +117,12 @@ alphabet_index:
       brief_definition: "The OUGHT dimension; what should be vs what is."
       status: stable
       added_iteration: 5
+
+    - id: P012
+      label: phenomenality
+      domain: mind
+      symbol: "☉"
+      prime: 37
+      brief_definition: "The qualitative WHAT-IT'S-LIKE of conscious experience."
+      status: stable
+      added_iteration: 6
