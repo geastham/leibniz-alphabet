@@ -101,3 +101,24 @@ iteration_state:
     - name: "substance"
       derivation: "existence + identity = particular existent (Aristotle's primary category)"
       iteration_derived: 11
+    - name: "belief"
+      derivation: "intentionality + possibility = mental state directed at possible state of affairs"
+      iteration_derived: 11
+    - name: "justification"
+      derivation: "normativity + intentionality + causation = normatively appropriate grounds for belief"
+      iteration_derived: 11
+    - name: "knowledge"
+      derivation: "belief + truth + justification = justified true belief (JTB)"
+      iteration_derived: 11
+    - name: "fairness"
+      derivation: "identity + normativity + composition = treating like cases alike"
+      iteration_derived: 11
+    - name: "desert"
+      derivation: "normativity + quality + causation = what ought to follow from prior qualities/actions"
+      iteration_derived: 11
+    - name: "rights"
+      derivation: "normativity + intentionality + possibility + negation = entitlements others must respect"
+      iteration_derived: 11
+    - name: "justice"
+      derivation: "fairness + desert + rights + signification = normative social order"
+      iteration_derived: 11

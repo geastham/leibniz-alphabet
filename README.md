@@ -240,7 +240,7 @@ Iteration 11  ██████████████████████
 | Ethics | 1 (normativity) | ✅ Complete |
 | **TOTAL** | **12** | |
 
-### Derived Concepts (20)
+### Derived Concepts (27)
 
 | Concept | Derivation |
 |---------|------------|
@@ -264,6 +264,13 @@ Iteration 11  ██████████████████████
 | Simultaneity | ∃A ∧ ∃B ∧ ¬(A≺B) ∧ ¬(B≺A) |
 | Change | identity + succession + quality + negation |
 | Substance | existence + identity (Aristotle's primary category) |
+| Belief | intentionality + possibility |
+| Justification | normativity + intentionality + causation |
+| Knowledge | belief + truth + justification (JTB) |
+| Fairness | identity + normativity + composition |
+| Desert | normativity + quality + causation |
+| Rights | normativity + intentionality + possibility + negation |
+| Justice | fairness + desert + rights + signification |
 
 ### Coverage Metrics
 
