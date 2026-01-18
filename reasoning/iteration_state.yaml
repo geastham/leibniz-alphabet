@@ -1,29 +1,32 @@
 iteration_state:
-  current_iteration: 2
+  current_iteration: 3
   phase: EXPANSION
   cycle_in_phase: 0
-  last_updated: "2026-01-18T15:59:00"
+  last_updated: "2026-01-18T17:44:30"
 
   current_strategy:
     proposer_mode: DOMAIN_SWEEP
     proposer_temperature: 0.7
     critic_strictness: 0.5
     domains_priority:
-      - being
       - space
-      - time
-      - causation
       - mind
+      - causation
+      - matter
+      - quality
 
   pending:
     candidates_to_evaluate: []
-    candidates_to_revise: []
+    candidates_to_revise:
+      - "location - consider ADJACENCY or EXTENSION as spatial primitive"
+      - "awareness - consider INTENTIONALITY as more fundamental"
     conflicts_to_resolve: []
     gaps_to_fill:
-      - "MODALITY (possibility/necessity) - revealed by rejection of causation"
+      - "SPATIAL primitive (adjacency? extension?)"
+      - "MENTAL primitive (intentionality?)"
 
   metrics:
-    recent_acceptance_rate: 0.67
+    recent_acceptance_rate: 0.56
     coverage_score: 0.0
     consistency_score: 1.0
 
@@ -33,6 +36,7 @@ iteration_state:
     iterations_since_primitive: 0
 
   history:
-    total_proposed: 6
-    total_accepted: 4
+    total_proposed: 9
+    total_accepted: 5
     total_rejected: 2
+    total_refined: 2

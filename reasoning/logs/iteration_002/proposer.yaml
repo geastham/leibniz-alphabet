@@ -1,0 +1,63 @@
+timestamp: '2026-01-18T17:42:19.177989'
+role: PROPOSER
+iteration: 2
+candidates:
+- label: possibility
+  domain: being
+  proposed_symbol: "\u25C7"
+  informal_definition: The modal status of what could be but is not necessarily so;
+    that which is not impossible. Possibility marks the space of what might exist
+    beyond what actually does.
+  ostensive_examples:
+  - It is possible that it will rain tomorrow
+  - A circle could have been drawn larger
+  - I could have chosen differently
+  negative_examples:
+  - Possibility is not probability - possible doesn't mean likely
+  - Possibility is not actuality - what's possible may never happen
+  primitiveness_argument: To define possibility, we say 'could be' or 'might be' -
+    but these ARE possibility. The modal circle is unbreakable.
+  decomposition_resistance: 'Every attempt uses modal language: might, could, can.
+    Even ''consistent'' means possibly true together.'
+  relevance_to_gaps: 'Critical gap from iteration 1: causation requires counterfactuals,
+    which require possibility.'
+  confidence: 0.9
+  id: CAND_002_00
+- label: location
+  domain: space
+  proposed_symbol: '@'
+  informal_definition: The spatial relation of occupying a position; being somewhere
+    rather than nowhere. Location is the basic spatial fact.
+  ostensive_examples:
+  - The book is on the table
+  - Paris is in France
+  - The electron is in the left detector
+  negative_examples:
+  - Location is not identity - things can be co-located
+  - Location is not extension - size differs from position
+  primitiveness_argument: To define location, we use 'where', 'at', 'in' - all spatial
+    terms that presuppose location.
+  decomposition_resistance: Try defining 'where' without place, position, at, in,
+    here, there. You cannot escape spatial indexicality.
+  relevance_to_gaps: Alphabet has time but not space. Location opens the spatial dimension.
+  confidence: 0.82
+  id: CAND_002_01
+- label: awareness
+  domain: mind
+  proposed_symbol: "\u2299"
+  informal_definition: The basic mental fact of something being present to a subject;
+    phenomenal consciousness or 'what it is like' to experience.
+  ostensive_examples:
+  - I am aware of this red color right now
+  - The pain is present to my consciousness
+  - There is something it is like to see blue
+  negative_examples:
+  - Awareness is not information processing - computers process without awareness
+  - Awareness is not attention - we are aware of things we don't attend to
+  primitiveness_argument: To define awareness, we use 'experience', 'consciousness',
+    'phenomenal' - all of which ARE awareness under other names.
+  decomposition_resistance: Every reduction either smuggles in awareness or changes
+    the subject. The hard problem exists because awareness resists reduction.
+  relevance_to_gaps: Alphabet lacks the mental. Awareness opens the phenomenal dimension.
+  confidence: 0.75
+  id: CAND_002_02

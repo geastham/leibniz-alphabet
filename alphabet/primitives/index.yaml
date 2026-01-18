@@ -1,16 +1,16 @@
 alphabet_index:
   version: "1.0.0"
-  last_updated: "2026-01-18T15:58:54"
-  iteration: 1
+  last_updated: "2026-01-18T17:44:08"
+  iteration: 2
 
   statistics:
-    total_primitives: 4
+    total_primitives: 5
     by_domain:
-      being: 1
+      being: 2
       relation: 2
       time: 1
     by_status:
-      stable: 4
+      stable: 5
       recent: 0
       contested: 0
 
@@ -50,3 +50,12 @@ alphabet_index:
       brief_definition: "The temporal relation of one moment coming after another; the before/after relation that structures time."
       status: stable
       added_iteration: 1
+
+    - id: P005
+      label: possibility
+      domain: being
+      symbol: "◇"
+      prime: 11
+      brief_definition: "The modal status of what could be but is not necessarily so. Possibility marks the space of alternatives to actuality."
+      status: stable
+      added_iteration: 2

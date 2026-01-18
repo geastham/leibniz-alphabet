@@ -1,0 +1,36 @@
+timestamp: '2026-01-18T17:44:08.129931'
+role: REFINER
+iteration: 2
+integrated_primitive:
+  id: P005
+  label: possibility
+  domain: being
+  symbol: "\u25C7"
+  prime_number: 11
+  definition:
+    informal: The modal status of what could be but is not necessarily so; that which
+      is not impossible. Possibility marks the space of alternatives to actuality
+      - what might exist or occur beyond what actually does.
+    formal: null
+  examples:
+    ostensive:
+    - It is possible that it will rain tomorrow
+    - A circle could have been drawn larger
+    - I could have chosen differently
+    negative:
+    - Possibility is not probability - possible doesn't mean likely
+    - Possibility is not actuality - what's possible may never happen
+  relationships:
+    contrasts_with: []
+    presupposes:
+    - P001
+    composes_well_with:
+    - P001
+    - P003
+    - P004
+    similar_to: []
+  confidence: 0.92
+  status: stable
+  notes: 'Fifth primitive. Opens the modal dimension. Enables expressing counterfactuals,
+    abilities, and alternatives. With possibility, causation becomes expressible:
+    C causes E iff succession(C,E) AND possibility(NOT-C implies NOT-E).'
