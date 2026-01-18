@@ -25,3 +25,15 @@ history:
   mdl_score: 0.6585
   expressiveness_ratio: 5.42
   challenge_coverage: 0.25
+- iteration: 11
+  timestamp: '2026-01-18T20:56:35Z'
+  primitives: 12
+  corpus_coverage: 0.844
+  weighted_coverage: 0.902
+  concepts_expressible: 65
+  shannon_entropy: 3.41
+  normalized_entropy: 0.951
+  bits_per_concept: 7.45
+  mdl_score: 0.6585
+  expressiveness_ratio: 5.42
+  challenge_coverage: 0.25

@@ -1,0 +1,68 @@
+evaluation:
+  candidate_label: "unity"
+  decomposition:
+    attempts:
+      - approach: "identity analysis"
+        attempt: "Unity = being ONE thing = having identity"
+        result: "If X=X (identity holds), then X is ONE thing. Unity is the flip side of identity - what has identity is ipso facto one."
+        survived: false
+      - approach: "numerical analysis"
+        attempt: "One is the first number, basis of quantity"
+        result: "One = the smallest positive quantity. Or: cardinality of a set with identity. Uses quantity + identity."
+        survived: false
+      - approach: "Neoplatonic One"
+        attempt: "The One beyond Being (Plotinus) - maybe transcends our categories"
+        result: "If the One is beyond being, it's either: (1) self-undermining (we're talking about it), or (2) expressible as possibility(negation(all-predicates)) - the meta-claim. Same analysis as transcendence."
+        survived: false
+      - approach: "heap vs organism"
+        attempt: "Unity = what makes a whole more than its parts"
+        result: "Organic unity = composition + some unifying quality (function, form). Expressible as composition + quality."
+        survived: false
+    survived: false
+    notes: "Unity decomposes to identity + existence. To exist as one thing = to exist with self-identity. Neoplatonic One either transcends (same issue as transcendence) or reduces."
+
+  circularity:
+    concepts_traced: ["existence", "identity", "quantity", "composition"]
+    survived: true
+    notes: "Clean derivation - no circularity."
+
+  redundancy:
+    can_be_expressed: true
+    using_primitives: ["existence", "identity"]
+    derivation: "Unity(X) = ∃X ∧ (X=X). To be ONE thing = to exist and be self-identical. Plurality = composition of unities."
+    notes: "FULLY REDUNDANT with identity. Unity is just identity viewed from the numerical angle."
+
+  edge_cases:
+    cases_found:
+      - case: "Unity across time (personal identity)"
+        severity: "low"
+        analysis: "Same person over time = identity preserved through change. Uses identity + succession."
+      - case: "Organic vs mechanical unity"
+        severity: "low"
+        analysis: "Organic: parts integrated by function. Mechanical: parts merely aggregated. Both use composition; organic adds normative/functional integration."
+      - case: "The number one"
+        severity: "low"
+        analysis: "One = ∃!x (there exists exactly one x). Expressible with existence + identity + negation."
+      - case: "Unity of consciousness"
+        severity: "medium"
+        analysis: "Unified phenomenal field = composition of phenomenal states into single experience. Uses phenomenality + composition."
+    overall_severity: "low"
+    notes: "All senses of unity reducible to identity + composition + other primitives."
+
+  cultural_variance:
+    evidence_for_universality:
+      - "All cultures count and have concepts of 'one'"
+      - "Unity/multiplicity distinction is universal"
+      - "Individuation is basic to cognition"
+    assessment: "universal"
+    notes: "Universal but derived from more basic identity."
+
+  parsimony:
+    expressiveness_value: "medium"
+    necessary: false
+    notes: "Unity adds no expressive power beyond identity and composition."
+
+  verdict: "REJECT"
+  confidence: 0.85
+  reasoning_summary: "Neoplatonic unity - the One beyond multiplicity - decomposes to identity + existence. To be one thing is to exist with self-identity. Plotinus' 'One beyond Being' faces the same issue as transcendence: either self-undermining or meta-expressible."
+  key_insight: "Identity IS unity. Self-sameness (A=A) entails being ONE thing. The Neoplatonic tradition elevated unity to primacy, but identity is the more fundamental concept from which unity derives."

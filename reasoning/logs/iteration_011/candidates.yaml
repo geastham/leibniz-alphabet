@@ -1,0 +1,55 @@
+candidates:
+  - label: "substance"
+    domain: "being"
+    proposed_symbol: "Σ"
+    informal_definition: "The fundamental bearer of properties; that which exists independently and underlies all predication; Aristotle's primary category - the 'this' that has qualities but is not itself a quality."
+    ostensive_examples:
+      - "This particular horse (not 'horseness')"
+      - "Socrates the individual (not humanity)"
+      - "A lump of gold (not 'yellowness' or 'heaviness')"
+      - "Descartes' res cogitans and res extensa"
+    negative_examples:
+      - "Properties or qualities (redness, heaviness)"
+      - "Relations (taller than, next to)"
+      - "Events (the explosion, the collision)"
+      - "Abstract objects (numbers, propositions)"
+    primitiveness_argument: "Aristotle placed substance as the primary category because everything else depends on it. Properties need bearers. Relations need relata. Without substance, there's nothing FOR qualities to qualify."
+    decomposition_resistance: "Substance seems to resist analysis - it's the ultimate subject that can never become a predicate. How could the fundamental bearer of properties be defined in terms of properties?"
+    relevance_to_gaps: "Tests whether Aristotelian metaphysics reduces to our alphabet. If substance is derivable, we've captured the core of Western ontology."
+    confidence: 0.35
+
+  - label: "change"
+    domain: "time"
+    proposed_symbol: "Δ"
+    informal_definition: "The process of becoming different; transition from one state to another; the dynamic aspect of reality emphasized by Heraclitus ('everything flows') and process philosophy."
+    ostensive_examples:
+      - "Water heating up (temperature change)"
+      - "A leaf turning from green to brown"
+      - "Growing older"
+      - "Learning something new"
+    negative_examples:
+      - "Static difference (A is different from B)"
+      - "Mere succession (A then B, without A becoming B)"
+      - "Spatial variation (red here, blue there)"
+    primitiveness_argument: "Heraclitus and Whitehead argue change is more fundamental than static being. Perhaps succession only captures sequence, not the dynamic flux of becoming."
+    decomposition_resistance: "Defining change as 'different states at different times' uses succession but loses the PROCESS - the 'becoming' rather than just 'being-at-t1 and being-at-t2'."
+    relevance_to_gaps: "Tests whether process philosophy reduces to our alphabet. Critical for temporal completeness."
+    confidence: 0.30
+
+  - label: "unity"
+    domain: "relation"
+    proposed_symbol: "𝟙"
+    informal_definition: "Oneness; the property of being a single, unified entity; the Neoplatonic 'One' beyond all multiplicity; the basis of numerical identity and individuation."
+    ostensive_examples:
+      - "A single organism vs a mere heap"
+      - "One nation, one team, one idea"
+      - "The number one as the basis of counting"
+      - "Personal identity across time"
+    negative_examples:
+      - "Mere collection or aggregate"
+      - "Division or multiplicity"
+      - "Identity (being the same as itself - not the same as being ONE thing)"
+    primitiveness_argument: "Plotinus placed the One above Being itself. Unity seems presupposed by identity (you must be ONE thing to be identical to yourself) and by quantity (one is the first number)."
+    decomposition_resistance: "Can unity be decomposed? Identity says A=A, but unity says A is ONE thing. Quantity gives us 'how many' but presupposes countable units."
+    relevance_to_gaps: "Tests whether Neoplatonic metaphysics reduces to our alphabet. Also tests numerical foundations."
+    confidence: 0.40

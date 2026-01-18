@@ -1,0 +1,64 @@
+evaluation:
+  candidate_label: "change"
+  decomposition:
+    attempts:
+      - approach: "temporal-quality analysis"
+        attempt: "Change = different qualities at different times"
+        result: "Change(A,P→Q) = ∃A(t1) ∧ ∃A(t2) ∧ t1≺t2 ∧ P(A,t1) ∧ Q(A,t2) ∧ P≠Q. Uses existence, identity, succession, quality, negation."
+        survived: false
+      - approach: "process-becoming analysis"
+        attempt: "Maybe the 'becoming' aspect isn't captured by mere succession"
+        result: "Becoming = the identity-preserving transition through successive states. The 'process' is just continuous change - limit of successive discrete changes."
+        survived: false
+      - approach: "Heraclitean flux"
+        attempt: "Everything flows - maybe flux is more basic than static being"
+        result: "Flux = continuous change = our derivation applied at every instant. No new primitive needed for the 'flow' - it's composition of moments of change."
+        survived: false
+    survived: false
+    notes: "Change fully decomposes to: same entity + different times + different qualities. The Heraclitean 'becoming' is not lost - it's captured by the structure."
+
+  circularity:
+    concepts_traced: ["existence", "identity", "succession", "quality", "negation"]
+    survived: true
+    notes: "Clean derivation using five primitives."
+
+  redundancy:
+    can_be_expressed: true
+    using_primitives: ["existence", "identity", "succession", "quality", "negation"]
+    derivation: "Change(A, P, Q) = ∃A(t1) ∧ ∃A(t2) ∧ (t1≺t2) ∧ P(A,t1) ∧ Q(A,t2) ∧ ¬(P=Q)"
+    notes: "FULLY DERIVABLE. Process philosophy's fundamental category reduces to our primitives."
+
+  edge_cases:
+    cases_found:
+      - case: "Cambridge change (mere relational change)"
+        severity: "low"
+        analysis: "Socrates becomes shorter than Theaetetus when Theaetetus grows. Expressible: relational quality changes due to change in relatum."
+      - case: "Substantial change (coming-to-be and passing-away)"
+        severity: "medium"
+        analysis: "Birth = existence begins. Death = existence ends. Change in existence itself. Expressible: ¬∃A(t1) ∧ ∃A(t2) = coming-to-be."
+      - case: "The 'specious present' and experienced change"
+        severity: "low"
+        analysis: "Phenomenal experience of change = phenomenality + change. The 'feel' of change uses our existing primitives."
+      - case: "Rate of change / acceleration"
+        severity: "low"
+        analysis: "Rate = quantity of change per time unit. Acceleration = change in rate. Composition of existing concepts."
+    overall_severity: "low"
+    notes: "All varieties of change (qualitative, relational, substantial, accelerated) expressible."
+
+  cultural_variance:
+    evidence_for_universality:
+      - "All cultures have concepts of change and transformation"
+      - "Language universally has tense systems"
+      - "Change is basic to human experience"
+    assessment: "universal"
+    notes: "Universal concept, but derivable."
+
+  parsimony:
+    expressiveness_value: "high"
+    necessary: false
+    notes: "Change is conceptually central but built from succession, quality, and identity."
+
+  verdict: "REJECT"
+  confidence: 0.80
+  reasoning_summary: "Heraclitean change - the fundamental flux of becoming - decomposes to identity + succession + quality + negation. The same entity has different properties at successive times. Process philosophy's 'becoming' is captured, not lost."
+  key_insight: "Succession is more fundamental than change. Change is a pattern WITHIN succession (same thing, different qualities, successive times). The primitive is the ordering; the flux is derived."

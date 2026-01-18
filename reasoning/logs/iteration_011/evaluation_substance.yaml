@@ -1,0 +1,61 @@
+evaluation:
+  candidate_label: "substance"
+  decomposition:
+    attempts:
+      - approach: "existence-identity analysis"
+        attempt: "Substance = that which EXISTS and has IDENTITY - the 'this' that persists"
+        result: "A substance is simply an existent particular: ∃X where X has identity (X=X). This uses P001 + P002."
+        survived: false
+      - approach: "quality-bearer analysis"
+        attempt: "Substance = the underlying bearer of properties"
+        result: "Quality-bearing is built into how quality works - anything that exists can have qualities. No special 'bearer' primitive needed."
+        survived: false
+      - approach: "independence criterion"
+        attempt: "Substance = that which exists independently, not in another"
+        result: "Independence = existence + negation(composition-in-other). Derivable."
+        survived: false
+    survived: false
+    notes: "Aristotle's substance decomposes to existence + identity. Primary substance = particular existent. Secondary substance = the quality/kind shared by particulars. No primitive needed."
+
+  circularity:
+    concepts_traced: ["existence", "identity", "quality"]
+    survived: true
+    notes: "Clean derivation - no circularity."
+
+  redundancy:
+    can_be_expressed: true
+    using_primitives: ["existence", "identity", "quality"]
+    derivation: "Substance(X) = ∃X ∧ (X=X) ∧ quality-bearer(X). Since anything that exists has identity and can bear qualities, substance = particular existent."
+    notes: "FULLY REDUNDANT. Aristotle's primary category reduces to our primitives."
+
+  edge_cases:
+    cases_found:
+      - case: "Bundle theory vs substratum"
+        severity: "low"
+        analysis: "Bundle theory: substance = bundle of qualities (composition of qualities). Substratum theory: bare particular + qualities. Both expressible with our primitives."
+      - case: "Descartes' res cogitans and res extensa"
+        severity: "low"
+        analysis: "Mental substance = existent with phenomenality. Extended substance = existent with spatial properties. Both derivable."
+      - case: "Events vs substances (process ontology)"
+        severity: "low"
+        analysis: "If events are fundamental (Whitehead), they're existents with temporal properties. Same framework applies."
+    overall_severity: "low"
+    notes: "All major theories of substance expressible within our framework."
+
+  cultural_variance:
+    evidence_for_universality:
+      - "Substance concepts appear across cultures (Greek ousia, Sanskrit dravya)"
+      - "Common sense distinguishes things from properties"
+      - "Grammar has noun/predicate distinction"
+    assessment: "universal"
+    notes: "Universal concept, but derivable - not primitive."
+
+  parsimony:
+    expressiveness_value: "high"
+    necessary: false
+    notes: "Substance is central to Western metaphysics but derivable from more basic primitives."
+
+  verdict: "REJECT"
+  confidence: 0.85
+  reasoning_summary: "Aristotle's substance - the fundamental bearer of properties, the 'this' underlying predication - decomposes to existence + identity. A substance is simply a particular existent. The alphabet captures Aristotelian metaphysics."
+  key_insight: "The primacy of substance in Western metaphysics reflects conceptual importance, not irreducibility. Existence and identity are more fundamental than substance."

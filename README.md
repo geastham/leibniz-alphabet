@@ -16,7 +16,7 @@
 
 [![Status](https://img.shields.io/badge/Status-COMPLETENESS%20CONFIRMED-brightgreen?style=for-the-badge)]()
 [![Primitives](https://img.shields.io/badge/Primitives-12-gold?style=for-the-badge)]()
-[![Iterations](https://img.shields.io/badge/Iterations-10-teal?style=for-the-badge)]()
+[![Iterations](https://img.shields.io/badge/Iterations-11-teal?style=for-the-badge)]()
 
 ---
 
@@ -224,7 +224,7 @@ reasoning_entry:
 ### Iteration Progress
 
 ```
-Iteration 10  ████████████████████████████████████████  COMPLETENESS CONFIRMED
+Iteration 11  ████████████████████████████████████████  COMPLETENESS CONFIRMED
 ```
 
 ### Alphabet Composition
@@ -240,7 +240,7 @@ Iteration 10  ██████████████████████
 | Ethics | 1 (normativity) | ✅ Complete |
 | **TOTAL** | **12** | |
 
-### Derived Concepts (18)
+### Derived Concepts (20)
 
 | Concept | Derivation |
 |---------|------------|
@@ -262,12 +262,14 @@ Iteration 10  ██████████████████████
 | Beauty | quality + phenomenality + normativity + ¬instrumental |
 | Infinity | ¬∃(quantity-maximum) |
 | Simultaneity | ∃A ∧ ∃B ∧ ¬(A≺B) ∧ ¬(B≺A) |
+| Change | identity + succession + quality + negation |
+| Substance | existence + identity (Aristotle's primary category) |
 
 ### Coverage Metrics
 
 ```
-Acceptance Rate:       36%  ███████░░░░░░░░░░░░░  12/33 candidates
-Recent Acceptance:      0%  ░░░░░░░░░░░░░░░░░░░░  0/12 (iterations 7-10)
+Acceptance Rate:       33%  ██████░░░░░░░░░░░░░░  12/36 candidates
+Recent Acceptance:      0%  ░░░░░░░░░░░░░░░░░░░░  0/15 (iterations 7-11)
 Corpus Coverage:       84%  ████████████████░░░░  65 concepts expressible
 Consistency Score:    100%  ████████████████████  No contradictions
 ```
