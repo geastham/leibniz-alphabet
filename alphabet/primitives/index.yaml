@@ -1,10 +1,10 @@
 alphabet_index:
   version: "1.0.0"
-  last_updated: "2026-01-18T18:19:30"
-  iteration: 4
+  last_updated: "2026-01-18T19:42:35"
+  iteration: 5
 
   statistics:
-    total_primitives: 10
+    total_primitives: 11
     by_domain:
       being: 2
       relation: 3
@@ -12,8 +12,9 @@ alphabet_index:
       space: 1
       mind: 1
       quality: 2
+      ethics: 1
     by_status:
-      stable: 10
+      stable: 11
       recent: 0
       contested: 0
 
@@ -23,7 +24,7 @@ alphabet_index:
       domain: being
       symbol: "∃"
       prime: 2
-      brief_definition: "The bare fact that something IS rather than is not; the positive presence of being."
+      brief_definition: "The bare fact that something IS rather than is not."
       status: stable
       added_iteration: 0
 
@@ -32,7 +33,7 @@ alphabet_index:
       domain: relation
       symbol: "≡"
       prime: 3
-      brief_definition: "The relation that each thing bears to itself and to nothing else."
+      brief_definition: "The relation that each thing bears to itself and nothing else."
       status: stable
       added_iteration: 0
 
@@ -41,7 +42,7 @@ alphabet_index:
       domain: relation
       symbol: "¬"
       prime: 5
-      brief_definition: "The logical operation of NOT; enables expressing absence, difference, and falsity."
+      brief_definition: "The logical operation of NOT; absence, difference, falsity."
       status: stable
       added_iteration: 1
 
@@ -50,7 +51,7 @@ alphabet_index:
       domain: time
       symbol: "≺"
       prime: 7
-      brief_definition: "The temporal before/after relation that structures time."
+      brief_definition: "The temporal before/after relation."
       status: stable
       added_iteration: 1
 
@@ -59,7 +60,7 @@ alphabet_index:
       domain: being
       symbol: "◇"
       prime: 11
-      brief_definition: "The modal status of what could be; the space of alternatives to actuality."
+      brief_definition: "What could be; alternatives to actuality."
       status: stable
       added_iteration: 2
 
@@ -68,7 +69,7 @@ alphabet_index:
       domain: space
       symbol: "⊣"
       prime: 13
-      brief_definition: "The spatial relation of being next to; adjacency is to space what succession is to time."
+      brief_definition: "The spatial next-to relation."
       status: stable
       added_iteration: 3
 
@@ -77,7 +78,7 @@ alphabet_index:
       domain: mind
       symbol: "→m"
       prime: 17
-      brief_definition: "The aboutness of mental states; that thoughts are OF or ABOUT something."
+      brief_definition: "The aboutness of mental states."
       status: stable
       added_iteration: 3
 
@@ -86,7 +87,7 @@ alphabet_index:
       domain: quality
       symbol: "Q"
       prime: 19
-      brief_definition: "The intrinsic character of things; WHAT KIND something is."
+      brief_definition: "WHAT KIND something is; intrinsic character."
       status: stable
       added_iteration: 3
 
@@ -95,7 +96,7 @@ alphabet_index:
       domain: quality
       symbol: "#"
       prime: 23
-      brief_definition: "The measurable magnitude; HOW MUCH or HOW MANY. Orthogonal to quality."
+      brief_definition: "HOW MUCH or HOW MANY; magnitude."
       status: stable
       added_iteration: 4
 
@@ -104,6 +105,15 @@ alphabet_index:
       domain: relation
       symbol: "⊏"
       prime: 29
-      brief_definition: "The part-whole relation; how simples combine into complex wholes. Meta-essential to the alphabet."
+      brief_definition: "The part-whole relation; mereology."
       status: stable
       added_iteration: 4
+
+    - id: P011
+      label: normativity
+      domain: ethics
+      symbol: "⊨"
+      prime: 31
+      brief_definition: "The OUGHT dimension; what should be vs what is."
+      status: stable
+      added_iteration: 5
