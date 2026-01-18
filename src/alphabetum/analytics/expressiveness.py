@@ -456,6 +456,12 @@ class ExpressivenessAnalyzer:
         """Generate a YAML-serializable expressiveness report."""
         metrics = self.analyze()
 
+        # Find challenge corpus coverage specifically
+        challenge_coverage = 0.0
+        for r in metrics.corpus_results:
+            if r.corpus_name == "challenge_concepts":
+                challenge_coverage = r.coverage_score
+
         report = {
             "expressiveness_report": {
                 "iteration": iteration,
@@ -494,6 +500,68 @@ class ExpressivenessAnalyzer:
         }
 
         return report
+
+    def append_to_history(self, iteration: int, notes: str = "") -> None:
+        """Append current metrics to the history file."""
+        from datetime import datetime
+
+        metrics = self.analyze()
+
+        # Find challenge corpus coverage
+        challenge_coverage = 0.0
+        for r in metrics.corpus_results:
+            if r.corpus_name == "challenge_concepts":
+                challenge_coverage = r.coverage_score
+
+        history_path = self.base_path / "reports" / "expressiveness" / "history.yaml"
+
+        # Load existing history
+        if history_path.exists():
+            with open(history_path) as f:
+                history_data = yaml.safe_load(f) or {}
+        else:
+            history_data = {"history": []}
+
+        history = history_data.get("history", [])
+
+        # Check if this iteration already exists
+        existing_idx = None
+        for i, entry in enumerate(history):
+            if entry.get("iteration") == iteration:
+                existing_idx = i
+                break
+
+        new_entry = {
+            "iteration": iteration,
+            "timestamp": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "primitives": metrics.primitives_count,
+            "corpus_coverage": round(metrics.corpus_coverage, 3),
+            "weighted_coverage": round(metrics.weighted_coverage, 3),
+            "concepts_expressible": metrics.concepts_expressible,
+            "shannon_entropy": round(metrics.shannon_entropy, 3),
+            "normalized_entropy": round(metrics.normalized_entropy, 3),
+            "bits_per_concept": round(metrics.bits_per_concept, 2),
+            "mdl_score": round(metrics.mdl_score, 4),
+            "expressiveness_ratio": round(metrics.expressiveness_ratio, 2),
+            "challenge_coverage": round(challenge_coverage, 3),
+        }
+        if notes:
+            new_entry["notes"] = notes
+
+        if existing_idx is not None:
+            history[existing_idx] = new_entry
+        else:
+            history.append(new_entry)
+
+        # Sort by iteration
+        history.sort(key=lambda x: x.get("iteration", 0))
+
+        history_data["history"] = history
+
+        # Write back
+        history_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(history_path, "w") as f:
+            yaml.dump(history_data, f, default_flow_style=False, sort_keys=False)
 
     def generate_encoding_table(self) -> str:
         """Generate a markdown table showing concept encodings with symbols."""

@@ -271,13 +271,16 @@ def compare(
 @app.command(name="report")
 def generate_report(
     path: Path = typer.Option(".", help="Path to alphabet repository"),
+    notes: str = typer.Option("", "--notes", "-n", help="Notes to add to history"),
 ):
     """Generate and save expressiveness report for current iteration."""
     state_manager = StateManager(path)
     analyzer = ExpressivenessAnalyzer(state_manager)
 
-    iteration_state = state_manager.load_iteration_state()
-    iteration = iteration_state.get("iteration_state", {}).get("current_iteration", 0)
+    # Read iteration from state file
+    with open(Path(path) / "reasoning" / "iteration_state.yaml") as f:
+        state_data = yaml.safe_load(f)
+    iteration = state_data.get("iteration_state", {}).get("current_iteration", 0)
 
     # Generate reports
     yaml_report = analyzer.generate_report(iteration)
@@ -298,9 +301,13 @@ def generate_report(
     with open(md_path, "w") as f:
         f.write(md_content)
 
+    # Update history
+    analyzer.append_to_history(iteration, notes)
+
     console.print(f"[green]Reports saved:[/green]")
     console.print(f"  YAML: {yaml_path}")
     console.print(f"  Markdown: {md_path}")
+    console.print(f"  History: reports/expressiveness/history.yaml")
 
     # Show summary
     metrics = analyzer.analyze()
@@ -308,6 +315,59 @@ def generate_report(
     console.print(f"  Coverage: {metrics.corpus_coverage:.1%}")
     console.print(f"  Expressible Concepts: {metrics.concepts_expressible}")
     console.print(f"  Shannon Entropy: {metrics.shannon_entropy:.3f}")
+
+
+@app.command()
+def history(
+    path: Path = typer.Option(".", help="Path to alphabet repository"),
+):
+    """Show metrics history across iterations."""
+    history_path = Path(path) / "reports" / "expressiveness" / "history.yaml"
+
+    if not history_path.exists():
+        console.print("[yellow]No history found. Run 'report' to generate.[/yellow]")
+        return
+
+    with open(history_path) as f:
+        data = yaml.safe_load(f)
+
+    entries = data.get("history", [])
+    if not entries:
+        console.print("[yellow]History is empty.[/yellow]")
+        return
+
+    table = Table(title="Expressiveness Metrics History")
+    table.add_column("Iter", style="cyan", justify="right")
+    table.add_column("Prims", justify="right")
+    table.add_column("Coverage", justify="right")
+    table.add_column("Challenge", justify="right")
+    table.add_column("Entropy", justify="right")
+    table.add_column("MDL", justify="right")
+    table.add_column("Expr Ratio", justify="right")
+
+    for entry in entries:
+        table.add_row(
+            str(entry.get("iteration", "?")),
+            str(entry.get("primitives", "?")),
+            f"{entry.get('corpus_coverage', 0):.1%}",
+            f"{entry.get('challenge_coverage', 0):.1%}",
+            f"{entry.get('shannon_entropy', 0):.3f}",
+            f"{entry.get('mdl_score', 0):.4f}",
+            f"{entry.get('expressiveness_ratio', 0):.2f}",
+        )
+
+    console.print(table)
+
+    # Show trend summary
+    if len(entries) >= 2:
+        first = entries[0]
+        last = entries[-1]
+        delta_cov = last.get("corpus_coverage", 0) - first.get("corpus_coverage", 0)
+        delta_prims = last.get("primitives", 0) - first.get("primitives", 0)
+
+        console.print(f"\n[bold]Trend (iter {first.get('iteration')} → {last.get('iteration')}):[/bold]")
+        console.print(f"  Primitives: {first.get('primitives')} → {last.get('primitives')} ({delta_prims:+d})")
+        console.print(f"  Coverage: {first.get('corpus_coverage', 0):.1%} → {last.get('corpus_coverage', 0):.1%} ({delta_cov:+.1%})")
 
 
 if __name__ == "__main__":

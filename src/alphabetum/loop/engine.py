@@ -347,6 +347,10 @@ class AlphabetumLoop:
 
             print(f"  Reports saved to: {reports_dir}")
 
+            # Append to history
+            analyzer.append_to_history(state.current_iteration)
+            print(f"  History updated")
+
             # Update state with expressiveness coverage
             state.coverage_score = max(state.coverage_score, metrics.corpus_coverage)
 
