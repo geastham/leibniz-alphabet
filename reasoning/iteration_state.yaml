@@ -1,8 +1,8 @@
 iteration_state:
-  current_iteration: 7
-  phase: EXPANSION
+  current_iteration: 8
+  phase: META_REFLECTION
   cycle_in_phase: 0
-  last_updated: "2026-01-18T20:15:00"
+  last_updated: "2026-01-18T20:45:00"
 
   current_strategy:
     proposer_mode: DOMAIN_SWEEP
@@ -20,24 +20,24 @@ iteration_state:
     candidates_to_revise: []
     conflicts_to_resolve: []
     gaps_to_fill:
-      - "Social domain still empty - but alterity now derivable from phenomenality"
-      - "Consider: self/reflexivity as potential primitive"
-      - "Near completeness - most new candidates prove derivable"
+      - "First 0% acceptance iteration - approaching completeness?"
+      - "Consider meta-reflection on whether alphabet is complete"
+      - "Test expressiveness against benchmark concepts"
 
   metrics:
-    recent_acceptance_rate: 0.33
+    recent_acceptance_rate: 0.0
     coverage_score: 0.0
     consistency_score: 1.0
 
   triggers:
-    meta_reflection_due: false
-    iterations_since_meta: 1
-    iterations_since_primitive: 0
+    meta_reflection_due: true
+    iterations_since_meta: 2
+    iterations_since_primitive: 1
 
   history:
-    total_proposed: 21
+    total_proposed: 24
     total_accepted: 12
-    total_rejected: 7
+    total_rejected: 10
     total_refined: 2
 
   derived_concepts:
@@ -65,3 +65,12 @@ iteration_state:
     - name: "awareness"
       derivation: "phenomenality + intentionality (phenomenal intentionality)"
       iteration_derived: 6
+    - name: "reflexivity"
+      derivation: "intentionality(bearer-of-phenomenality) = self-reference"
+      iteration_derived: 7
+    - name: "signification"
+      derivation: "composition(minds) + normativity + intentionality + possibility = convention"
+      iteration_derived: 7
+    - name: "force"
+      derivation: "quality + possibility + causation = dispositional causal power"
+      iteration_derived: 7
