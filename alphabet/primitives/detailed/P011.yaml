@@ -1,0 +1,32 @@
+id: P011
+label: normativity
+domain: ethics
+symbol: "\u22A8"
+prime_number: 31
+definition:
+  informal: The dimension of ought, should, must; that some things are correct, proper,
+    or required while others are incorrect, improper, or forbidden. Normativity is
+    orthogonal to description - it captures what SHOULD BE, not what IS.
+  formal: null
+examples:
+  ostensive:
+  - You OUGHT to keep your promises
+  - 2+2 SHOULD equal 4 (epistemic normativity)
+  - This move is CORRECT in chess
+  negative:
+  - Normativity is not regularity - things fall, but don't OUGHT to fall
+  - Normativity is not preference - preferences aren't correctness
+relationships:
+  contrasts_with: []
+  presupposes:
+  - P001
+  composes_well_with:
+  - P007
+  - P008
+  - P005
+  similar_to: []
+confidence: 0.78
+status: stable
+notes: Eleventh primitive. Opens the evaluative dimension. The is/ought gap is real
+  - descriptive primitives cannot generate normativity. With normativity, we can derive
+  valence (quality + normative status).

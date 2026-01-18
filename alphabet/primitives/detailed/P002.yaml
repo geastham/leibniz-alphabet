@@ -1,0 +1,29 @@
+id: P002
+label: identity
+domain: relation
+symbol: "\u2261"
+prime_number: 3
+definition:
+  informal: The relation that each thing bears to itself and to nothing else; that
+    a thing is the same as itself. Identity is what makes reference, persistence,
+    and counting possible.
+  formal: null
+examples:
+  ostensive:
+  - The Morning Star is identical to the Evening Star (both are Venus)
+  - Mark Twain is identical to Samuel Clemens
+  - This chair now is the same chair as this chair now
+  negative:
+  - Similarity is not identity - two red balls are similar but not identical
+  - Equality of properties is not identity - indistinguishable yet distinct
+relationships:
+  contrasts_with: []
+  presupposes:
+  - P001
+  composes_well_with:
+  - P001
+  similar_to: []
+confidence: 0.92
+status: stable
+notes: Second primitive. Presupposes existence. Together with existence, forms bedrock
+  of ontology.

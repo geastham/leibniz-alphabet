@@ -1,28 +1,29 @@
 iteration_state:
-  current_iteration: 0
+  current_iteration: 6
   phase: EXPANSION
   cycle_in_phase: 0
-  last_updated: null
+  last_updated: "2026-01-18T19:43:00"
 
   current_strategy:
     proposer_mode: DOMAIN_SWEEP
     proposer_temperature: 0.7
     critic_strictness: 0.5
     domains_priority:
-      - being
-      - space
-      - time
-      - causation
-      - mind
+      - social
+      - knowledge
+      - matter
+      - emotion
+      - language
 
   pending:
     candidates_to_evaluate: []
     candidates_to_revise: []
     conflicts_to_resolve: []
-    gaps_to_fill: []
+    gaps_to_fill:
+      - "Approaching completeness - most new candidates derivable"
 
   metrics:
-    recent_acceptance_rate: null
+    recent_acceptance_rate: 0.61
     coverage_score: 0.0
     consistency_score: 1.0
 
@@ -32,6 +33,27 @@ iteration_state:
     iterations_since_primitive: 0
 
   history:
-    total_proposed: 0
-    total_accepted: 0
-    total_rejected: 0
+    total_proposed: 18
+    total_accepted: 11
+    total_rejected: 5
+    total_refined: 2
+
+  derived_concepts:
+    - name: "difference"
+      derivation: "negation(identity)"
+      iteration_derived: 0
+    - name: "necessity"
+      derivation: "negation(possibility(negation(P)))"
+      iteration_derived: 2
+    - name: "causation"
+      derivation: "succession + counterfactual(possibility, negation)"
+      iteration_derived: 2
+    - name: "agency"
+      derivation: "intentionality + causation"
+      iteration_derived: 4
+    - name: "truth"
+      derivation: "intentionality + existence (object of intentional state exists)"
+      iteration_derived: 5
+    - name: "valence"
+      derivation: "quality + normativity (quality with normative polarity)"
+      iteration_derived: 5

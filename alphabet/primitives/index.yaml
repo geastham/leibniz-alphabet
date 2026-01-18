@@ -1,14 +1,119 @@
 alphabet_index:
   version: "1.0.0"
-  last_updated: null
-  iteration: 0
+  last_updated: "2026-01-18T19:42:35"
+  iteration: 5
 
   statistics:
-    total_primitives: 0
-    by_domain: {}
+    total_primitives: 11
+    by_domain:
+      being: 2
+      relation: 3
+      time: 1
+      space: 1
+      mind: 1
+      quality: 2
+      ethics: 1
     by_status:
-      stable: 0
+      stable: 11
       recent: 0
       contested: 0
 
-  primitives: []
+  primitives:
+    - id: P001
+      label: existence
+      domain: being
+      symbol: "∃"
+      prime: 2
+      brief_definition: "The bare fact that something IS rather than is not."
+      status: stable
+      added_iteration: 0
+
+    - id: P002
+      label: identity
+      domain: relation
+      symbol: "≡"
+      prime: 3
+      brief_definition: "The relation that each thing bears to itself and nothing else."
+      status: stable
+      added_iteration: 0
+
+    - id: P003
+      label: negation
+      domain: relation
+      symbol: "¬"
+      prime: 5
+      brief_definition: "The logical operation of NOT; absence, difference, falsity."
+      status: stable
+      added_iteration: 1
+
+    - id: P004
+      label: succession
+      domain: time
+      symbol: "≺"
+      prime: 7
+      brief_definition: "The temporal before/after relation."
+      status: stable
+      added_iteration: 1
+
+    - id: P005
+      label: possibility
+      domain: being
+      symbol: "◇"
+      prime: 11
+      brief_definition: "What could be; alternatives to actuality."
+      status: stable
+      added_iteration: 2
+
+    - id: P006
+      label: adjacency
+      domain: space
+      symbol: "⊣"
+      prime: 13
+      brief_definition: "The spatial next-to relation."
+      status: stable
+      added_iteration: 3
+
+    - id: P007
+      label: intentionality
+      domain: mind
+      symbol: "→m"
+      prime: 17
+      brief_definition: "The aboutness of mental states."
+      status: stable
+      added_iteration: 3
+
+    - id: P008
+      label: quality
+      domain: quality
+      symbol: "Q"
+      prime: 19
+      brief_definition: "WHAT KIND something is; intrinsic character."
+      status: stable
+      added_iteration: 3
+
+    - id: P009
+      label: quantity
+      domain: quality
+      symbol: "#"
+      prime: 23
+      brief_definition: "HOW MUCH or HOW MANY; magnitude."
+      status: stable
+      added_iteration: 4
+
+    - id: P010
+      label: composition
+      domain: relation
+      symbol: "⊏"
+      prime: 29
+      brief_definition: "The part-whole relation; mereology."
+      status: stable
+      added_iteration: 4
+
+    - id: P011
+      label: normativity
+      domain: ethics
+      symbol: "⊨"
+      prime: 31
+      brief_definition: "The OUGHT dimension; what should be vs what is."
+      status: stable
+      added_iteration: 5

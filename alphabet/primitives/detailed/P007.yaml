@@ -1,0 +1,31 @@
+id: P007
+label: intentionality
+domain: mind
+symbol: "\u2192m"
+prime_number: 17
+definition:
+  informal: The aboutness or directedness of mental states; that mental states are
+    OF or ABOUT something. Intentionality is what makes thoughts be thoughts OF objects,
+    beliefs be beliefs ABOUT states of affairs.
+  formal: null
+examples:
+  ostensive:
+  - My belief is ABOUT the weather
+  - Her desire is FOR chocolate
+  - His fear is OF spiders
+  negative:
+  - Intentionality is not causation - my thought about Paris isn't caused by Paris
+  - Intentionality is not physical connection - I can think about unicorns
+relationships:
+  contrasts_with: []
+  presupposes:
+  - P001
+  composes_well_with:
+  - P001
+  - P005
+  similar_to: []
+confidence: 0.85
+status: stable
+notes: Seventh primitive. Opens the mental dimension. Intentionality is the mark of
+  the mental - what distinguishes thoughts from mere brain states. Brentano's insight
+  vindicated.

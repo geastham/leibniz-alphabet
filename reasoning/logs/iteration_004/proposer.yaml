@@ -1,0 +1,63 @@
+timestamp: '2026-01-18T18:17:05.651159'
+role: PROPOSER
+iteration: 4
+candidates:
+- label: quantity
+  domain: quantity
+  proposed_symbol: '#'
+  informal_definition: The aspect of things that answers 'how much' or 'how many';
+    the measurable magnitude or countable multitude.
+  ostensive_examples:
+  - There are THREE apples (discrete quantity)
+  - The rope is TWO METERS long (continuous quantity)
+  - She has MORE money than him (comparative)
+  negative_examples:
+  - Quantity is not quality - how much vs what kind
+  - Quantity is not identity - equal quantities can be distinct
+  primitiveness_argument: To define quantity, we say 'amount', 'magnitude', 'number'
+    - all of which ARE quantity.
+  decomposition_resistance: Try defining 'how much' without amount, number, degree.
+    The quantitative dimension resists elimination.
+  relevance_to_gaps: Without quantity, cannot express amounts or measurements. Have
+    WHAT KIND but not HOW MUCH.
+  confidence: 0.85
+  id: CAND_004_00
+- label: agency
+  domain: action
+  proposed_symbol: "\u26A1"
+  informal_definition: The capacity to initiate change; being a source of action rather
+    than merely undergoing change.
+  ostensive_examples:
+  - She DECIDED to leave (agent initiating)
+  - The cat JUMPED onto the table (animate agency)
+  - I CHOSE the red one (deliberate agency)
+  negative_examples:
+  - Agency is not mere causation - rocks cause but have no agency
+  - Agency is not motion - leaves move but have no agency
+  primitiveness_argument: To define agency, we say 'initiates', 'does', 'acts' - but
+    these ARE agency.
+  decomposition_resistance: Agency involves being SOURCE of causal chains, not merely
+    a link. Agent/patient distinction resists elimination.
+  relevance_to_gaps: Without agency, cannot distinguish actions from mere events.
+  confidence: 0.78
+  id: CAND_004_01
+- label: composition
+  domain: relation
+  proposed_symbol: "\u228F"
+  informal_definition: The part-whole relation; that some things are PARTS OF other
+    things, constituting them.
+  ostensive_examples:
+  - The wheel is PART OF the car
+  - The chapter is PART OF the book
+  - The cell is PART OF the organism
+  negative_examples:
+  - Composition is not spatial containment - meanings aren't spatially in sentences
+  - Composition is not set membership - my hand is part of me, not member of {me}
+  primitiveness_argument: To define composition, we say 'part of', 'constituent of'
+    - these ARE composition.
+  decomposition_resistance: Part-whole is sui generis. Parts are IN wholes differently
+    than set members.
+  relevance_to_gaps: Needed for expressing how complex things built from simpler.
+    Essential for Leibnizian calculus.
+  confidence: 0.82
+  id: CAND_004_02

@@ -1,0 +1,32 @@
+id: P009
+label: quantity
+domain: quantity
+symbol: '#'
+prime_number: 23
+definition:
+  informal: The aspect of things that answers 'how much' or 'how many'; the measurable
+    magnitude or countable multitude. Quantity is orthogonal to quality - it captures
+    HOW MUCH while quality captures WHAT KIND.
+  formal: null
+examples:
+  ostensive:
+  - There are THREE apples (discrete quantity)
+  - The rope is TWO METERS long (continuous quantity)
+  - She has MORE money than him (comparative)
+  negative:
+  - Quantity is not quality - how much vs what kind
+  - Quantity is not identity - equal quantities can be distinct
+relationships:
+  contrasts_with:
+  - P008
+  presupposes:
+  - P001
+  composes_well_with:
+  - P001
+  - P008
+  similar_to: []
+confidence: 0.87
+status: stable
+notes: Ninth primitive. Completes the quality/quantity pair - the two fundamental
+  ways of characterizing things. Together they capture the 'what kind' and 'how much'
+  of everything.

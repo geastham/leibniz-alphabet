@@ -1,0 +1,186 @@
+timestamp: '2026-01-18T18:18:04.388902'
+role: CRITIC
+evaluations:
+- candidate_label: quantity
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as what can be measured
+      result: Circular - measurement assigns quantities.
+      survived: true
+    - approach: synthetic
+      attempt: Break into unit + repetition
+      result: Only works for discrete. Repetition presupposes counting.
+      survived: true
+    - approach: functional
+      attempt: Define as what numbers represent
+      result: Numbers ARE quantities.
+      survived: true
+    survived: true
+    notes: Quantity resists decomposition. 'How much' is primitive.
+  circularity:
+    concepts_traced:
+    - amount
+    - magnitude
+    - number
+    - measure
+    - degree
+    circular_paths: []
+    survived: true
+    notes: All traced concepts ARE or presuppose quantity.
+  redundancy:
+    can_be_expressed: false
+    using_primitives:
+    - existence
+    - identity
+    - negation
+    - succession
+    - possibility
+    - adjacency
+    - intentionality
+    - quality
+    notes: Quality is WHAT KIND, quantity is HOW MUCH. Orthogonal dimensions.
+  edge_cases:
+    cases_found:
+    - case: Discrete vs continuous quantity
+      severity: medium
+    - case: Intensive vs extensive
+      severity: low
+    overall_severity: medium
+    notes: Varieties of quantity, not concept itself.
+  cultural_variance:
+    evidence_for_universality:
+    - All languages have numbers and comparatives
+    - Infants have numerosity sense
+    evidence_against: []
+    assessment: universal
+    notes: Quantity is cognitive universal.
+  parsimony:
+    expressiveness_value: essential
+    necessary: true
+    notes: Completes descriptive apparatus. Cannot express amounts without it.
+  verdict: ACCEPT
+  confidence: 0.87
+  reasoning_summary: Quantity is primitive. 'How much' orthogonal to quality's 'what
+    kind'.
+  key_insight: 'Quality and quantity: WHAT KIND and HOW MUCH. Both needed.'
+  candidate_id: CAND_004_00
+- candidate_label: agency
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as causation + intentionality
+      result: PROMISING - agent = intentional cause. Directed causation.
+      survived: false
+    - approach: synthetic
+      attempt: Break into source of change + goal-directedness
+      result: 'Same reduction: causation + intentionality.'
+      survived: false
+    - approach: functional
+      attempt: Define as what distinguishes actions from events
+      result: Reduces to 'events with intentional causes'.
+      survived: false
+    survived: false
+    notes: Agency = CAUSATION + INTENTIONALITY. Intentional cause.
+  circularity:
+    concepts_traced:
+    - acts
+    - does
+    - initiates
+    circular_paths:
+    - "agency \u2192 does \u2192 agency"
+    survived: true
+    notes: Ordinary circular, but causation + intentionality escapes.
+  redundancy:
+    can_be_expressed: true
+    using_primitives:
+    - intentionality
+    - possibility
+    - succession
+    - negation
+    notes: Agency = intentional causation. Causation already derivable. Agency = cause
+      directed by intentional states.
+  edge_cases:
+    cases_found:
+    - case: Unconscious agency
+      severity: medium
+    - case: Collective agency
+      severity: medium
+    overall_severity: medium
+    notes: May be handled by intentionality + causation.
+  cultural_variance:
+    evidence_for_universality:
+    - Agent/patient distinction universal
+    evidence_against: []
+    assessment: universal
+    notes: Universal but derivable.
+  parsimony:
+    expressiveness_value: high
+    necessary: false
+    notes: Agency derivable from existing primitives.
+  verdict: REJECT
+  confidence: 0.72
+  reasoning_summary: Agency = intentional causation. Derivable, not primitive.
+  key_insight: Shows existing primitives more powerful than thought!
+  candidate_id: CAND_004_01
+- candidate_label: composition
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as spatial containment
+      result: Fails - abstract composition exists (meaning in sentence).
+      survived: true
+    - approach: synthetic
+      attempt: Break into identity with fusion of parts
+      result: Presupposes composition - 'parts' already mereological.
+      survived: true
+    - approach: functional
+      attempt: Define as set membership
+      result: Fails - my hand part of me, not member of {me}.
+      survived: true
+    survived: true
+    notes: Composition sui generis. Part-whole irreducible.
+  circularity:
+    concepts_traced:
+    - part of
+    - constituent
+    - makes up
+    circular_paths: []
+    survived: true
+    notes: All ARE composition. Mereological primitive.
+  redundancy:
+    can_be_expressed: false
+    using_primitives:
+    - existence
+    - identity
+    - negation
+    - succession
+    - possibility
+    - adjacency
+    - intentionality
+    - quality
+    notes: Adjacency is 'next to', not 'part of'. Cannot express part-whole.
+  edge_cases:
+    cases_found:
+    - case: Temporal parts
+      severity: medium
+    - case: Vague composition (sorites)
+      severity: medium
+    overall_severity: medium
+    notes: Boundaries of composition, not core concept.
+  cultural_variance:
+    evidence_for_universality:
+    - All languages express part-whole
+    - Children understand parts early
+    evidence_against: []
+    assessment: universal
+    notes: Mereology cognitively fundamental.
+  parsimony:
+    expressiveness_value: high
+    necessary: true
+    notes: Essential for structure. Meta-essential - how alphabet works!
+  verdict: ACCEPT
+  confidence: 0.85
+  reasoning_summary: Composition irreducible. Part-whole essential for structure.
+  key_insight: 'Meta-essential: complex concepts COMPOSED of primitives. Need mereology.'
+  candidate_id: CAND_004_02

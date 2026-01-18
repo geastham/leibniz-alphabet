@@ -1,0 +1,181 @@
+timestamp: '2026-01-18T17:50:12.683780'
+role: CRITIC
+evaluations:
+- candidate_label: adjacency
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as zero distance between boundaries
+      result: Circular - distance is constructed FROM adjacency.
+      survived: true
+    - approach: synthetic
+      attempt: Break into distinctness + no space between
+      result: '''No space between'' IS adjacency.'
+      survived: true
+    - approach: functional
+      attempt: Define as potential for direct causal interaction
+      result: Conflates space and causation. Quantum entanglement refutes.
+      survived: true
+    survived: true
+    notes: Adjacency resists decomposition. Spatial contact is irreducible.
+  circularity:
+    concepts_traced:
+    - touching
+    - next to
+    - bordering
+    - contiguous
+    circular_paths: []
+    survived: true
+    notes: All traced concepts ARE adjacency. Signature of primitive.
+  redundancy:
+    can_be_expressed: false
+    using_primitives:
+    - existence
+    - identity
+    - negation
+    - succession
+    - possibility
+    notes: No spatial concepts in alphabet. Cannot build from non-spatial.
+  edge_cases:
+    cases_found:
+    - case: Quantum superposition of adjacency
+      severity: medium
+    overall_severity: medium
+    notes: Edge cases concern physics, not concept itself.
+  cultural_variance:
+    evidence_for_universality:
+    - All languages distinguish next-to from far-from
+    - Spatial reasoning cognitively fundamental
+    evidence_against: []
+    assessment: universal
+    notes: Spatial proximity is cognitive universal.
+  parsimony:
+    expressiveness_value: essential
+    necessary: true
+    notes: Location and distance derivable from adjacency. It's the spatial primitive.
+  verdict: ACCEPT
+  confidence: 0.88
+  reasoning_summary: Adjacency is irreducible spatial relation. Fills spatial gap.
+  key_insight: Adjacency is to space what succession is to time - basic ordering relation.
+  candidate_id: CAND_003_00
+- candidate_label: intentionality
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as causal covariation with objects
+      result: Fails - thoughts about unicorns don't covary with unicorns.
+      survived: true
+    - approach: synthetic
+      attempt: Break into mental state + object of thought
+      result: Describes but doesn't decompose. The OF relation IS intentionality.
+      survived: true
+    - approach: functional
+      attempt: Define as what gives semantic content
+      result: Circular - semantic content IS intentionality.
+      survived: true
+    survived: true
+    notes: Intentionality resists naturalistic reduction. Aboutness is sui generis.
+  circularity:
+    concepts_traced:
+    - about
+    - of
+    - directed at
+    - representing
+    - meaning
+    circular_paths: []
+    survived: true
+    notes: All ARE intentionality. Brentano was right.
+  redundancy:
+    can_be_expressed: false
+    using_primitives:
+    - existence
+    - identity
+    - negation
+    - succession
+    - possibility
+    notes: No mental concepts in alphabet. Cannot build from non-mental.
+  edge_cases:
+    cases_found:
+    - case: Non-existent objects of thought
+      severity: medium
+    - case: Derived intentionality of words
+      severity: medium
+    overall_severity: medium
+    notes: Edge cases concern extension, not primitiveness.
+  cultural_variance:
+    evidence_for_universality:
+    - All cultures recognize thoughts are about things
+    - Belief/desire psychology cross-cultural
+    evidence_against: []
+    assessment: universal
+    notes: Intentionality is universal structure of mental life.
+  parsimony:
+    expressiveness_value: essential
+    necessary: true
+    notes: Opens mental dimension. Required for belief, desire, meaning.
+  verdict: ACCEPT
+  confidence: 0.85
+  reasoning_summary: Intentionality is irreducible aboutness. Fills mental gap.
+  key_insight: Intentionality is to mind what adjacency is to space - constitutive
+    relation.
+  candidate_id: CAND_003_01
+- candidate_label: quality
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as determinable property
+      result: Informative but doesn't decompose. Property IS quality.
+      survived: true
+    - approach: synthetic
+      attempt: Break into thing + way of being
+      result: '''Way of being'' IS quality.'
+      survived: true
+    - approach: functional
+      attempt: Define as what makes things similar in respects
+      result: Presupposes quality - respects ARE qualities.
+      survived: true
+    survived: true
+    notes: Quality resists decomposition. Intrinsic character is primitive.
+  circularity:
+    concepts_traced:
+    - property
+    - attribute
+    - characteristic
+    - way of being
+    circular_paths: []
+    survived: true
+    notes: All ARE quality. Concept is primitive.
+  redundancy:
+    can_be_expressed: false
+    using_primitives:
+    - existence
+    - identity
+    - negation
+    - succession
+    - possibility
+    notes: Quality adds WHAT things are like. Existence says THAT, quality says WHAT
+      KIND.
+  edge_cases:
+    cases_found:
+    - case: Are relations qualities?
+      severity: medium
+    - case: Structural vs qualitative properties
+      severity: low
+    overall_severity: medium
+    notes: Edge cases concern boundaries. Core concept clear.
+  cultural_variance:
+    evidence_for_universality:
+    - All languages have quality words
+    - Thing/property distinction universal
+    evidence_against: []
+    assessment: universal
+    notes: Quality/substance distinction appears in all cultures.
+  parsimony:
+    expressiveness_value: high
+    necessary: true
+    notes: Without quality, cannot express what things are LIKE.
+  verdict: ACCEPT
+  confidence: 0.82
+  reasoning_summary: Quality is primitive intrinsic character. What things are like.
+  key_insight: Existence=THAT, identity=WHICH, quality=WHAT KIND. Orthogonal dimensions.
+  candidate_id: CAND_003_02

@@ -1,0 +1,69 @@
+timestamp: '2026-01-18T15:56:05.973192'
+role: PROPOSER
+iteration: 1
+candidates:
+- label: negation
+  domain: relation
+  proposed_symbol: "\xAC"
+  informal_definition: The logical operation that reverses truth value; the concept
+    of NOT. When applied to any proposition or concept, it yields its opposite or
+    denial.
+  ostensive_examples:
+  - It is NOT raining (the denial of 'it is raining')
+  - This is not-red (the absence of redness)
+  - Non-existence (the negation of existence)
+  negative_examples:
+  - Negation is not mere absence - empty space is not negation
+  - Negation is not opposition - hot vs cold are opposites but neither IS negation
+  - Negation is not falsity - false propositions presuppose negation
+  primitiveness_argument: To define negation, you must say what it is NOT - but that
+    uses negation. Every attempt to explain 'not' uses 'not' or synonyms.
+  decomposition_resistance: Try defining NOT without using not, non-, un-, lack, absence,
+    denial - you cannot. All these ARE negation.
+  relevance_to_gaps: 'Critical gap from iteration 0: difference = negation(identity).
+    Without negation, we cannot express difference, absence, or falsity.'
+  confidence: 0.95
+  id: CAND_001_00
+- label: causation
+  domain: causation
+  proposed_symbol: "\u2192c"
+  informal_definition: The relation whereby one event brings about another. The 'because'
+    relation - why things happen.
+  ostensive_examples:
+  - The rock broke the window (impact caused breaking)
+  - Heat causes water to boil
+  - Her decision caused the outcome
+  negative_examples:
+  - Correlation is not causation
+  - Temporal succession is not causation - night follows day but day doesn't cause
+    night
+  primitiveness_argument: 'Every attempt to define causation uses causal language:
+    ''produces'', ''brings about'', ''makes happen''. Even Hume''s reductive account
+    smuggles in causation.'
+  decomposition_resistance: Regularity theories, counterfactual theories, process
+    theories - all either presuppose causation or fail to capture it.
+  relevance_to_gaps: Without causation, we cannot express 'why' anything happens.
+  confidence: 0.8
+  id: CAND_001_01
+- label: succession
+  domain: time
+  proposed_symbol: "\u227A"
+  informal_definition: The temporal relation of one moment coming after another; the
+    before/after relation that structures time.
+  ostensive_examples:
+  - Monday comes before Tuesday
+  - The flash preceded the thunder
+  - Birth precedes death
+  negative_examples:
+  - Succession is not causation - before doesn't imply because
+  - Succession is not spatial ordering
+  - Succession is not duration
+  primitiveness_argument: To define 'before' you say 'earlier than' or 'prior to'
+    - but these ARE succession. You cannot explain temporal order without using temporal
+    order.
+  decomposition_resistance: Attempts to reduce time to causation or space don't eliminate
+    succession - they relocate it.
+  relevance_to_gaps: Without succession, we cannot express change, process, or any
+    temporal fact.
+  confidence: 0.85
+  id: CAND_001_02

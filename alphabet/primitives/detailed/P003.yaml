@@ -1,0 +1,30 @@
+id: P003
+label: negation
+domain: relation
+symbol: "\xAC"
+prime_number: 5
+definition:
+  informal: The logical operation that reverses truth value; the concept of NOT. When
+    applied to any proposition or concept, it yields its opposite or denial. Negation
+    is the gateway to expressing absence, difference, and falsity.
+  formal: null
+examples:
+  ostensive:
+  - It is NOT raining (the denial of 'it is raining')
+  - This is not-red (the absence of redness)
+  - Non-existence (the negation of existence)
+  negative:
+  - Negation is not mere absence - empty space is not negation
+  - Negation is not opposition - hot vs cold are opposites but neither IS negation
+relationships:
+  contrasts_with: []
+  presupposes:
+  - P001
+  composes_well_with:
+  - P001
+  - P002
+  similar_to: []
+confidence: 0.95
+status: stable
+notes: "Third primitive. Completes basic logical toolkit. Now we can express: non-existence\
+  \ (\xAC\u2203), difference (\xAC\u2261), and denial of any property."

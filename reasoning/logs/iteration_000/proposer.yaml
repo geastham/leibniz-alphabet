@@ -1,0 +1,79 @@
+timestamp: '2026-01-18T15:49:03.679780'
+role: PROPOSER
+iteration: 0
+candidates:
+- label: existence
+  domain: being
+  proposed_symbol: "\u2203"
+  informal_definition: The bare fact that something IS rather than is not; the positive
+    presence of being as opposed to nothingness
+  ostensive_examples:
+  - This rock exists - it is here, present, real
+  - The number 7 exists as a mathematical object
+  - My pain right now exists - it is occurring
+  negative_examples:
+  - A married bachelor does not exist - it is logically impossible
+  - Phlogiston turned out not to exist - it was a mistaken posit
+  primitiveness_argument: Any attempt to define existence uses concepts that presuppose
+    existence. To say something 'is real' or 'is present' or 'occurs' already assumes
+    the concept of being/existence. It is the ground-floor concept upon which all
+    others rest.
+  decomposition_resistance: When you try to break down existence, you find yourself
+    saying 'to exist is to be...' but 'be' IS existence. Every synonym circles back.
+    This is the mark of a true primitive - you cannot escape it.
+  relevance_to_gaps: Without existence, we cannot express that anything IS. It is
+    the precondition for all other predicates - nothing can be located, caused, or
+    thought unless it first exists.
+  confidence: 0.95
+  id: CAND_000_00
+- label: identity
+  domain: relation
+  proposed_symbol: "\u2261"
+  informal_definition: The relation that each thing bears to itself and to nothing
+    else; that a thing is the same as itself
+  ostensive_examples:
+  - The Morning Star is identical to the Evening Star (both are Venus)
+  - Mark Twain is identical to Samuel Clemens
+  - This chair now is the same chair as this chair now
+  negative_examples:
+  - Similarity is not identity - two red balls are similar but not identical
+  - Equality of properties is not identity - two electrons may be indistinguishable
+    yet numerically distinct
+  primitiveness_argument: 'To define identity requires saying ''x is the same as y''
+    but ''same'' just IS identity. All attempts at definition (Leibniz''s law: x=y
+    iff they share all properties) presuppose we can re-identify the relata, which
+    requires identity.'
+  decomposition_resistance: Philosophers have tried to reduce identity to indiscernibility
+    (sharing all properties), but evaluating indiscernibility requires tracking which
+    object we're asking about - which presupposes identity. The circle is unbreakable.
+  relevance_to_gaps: Without identity, we cannot express that something persists through
+    change, that two names refer to the same thing, or that we are counting correctly.
+    It undergirds all predication and quantification.
+  confidence: 0.9
+  id: CAND_000_01
+- label: difference
+  domain: relation
+  proposed_symbol: "\u2262"
+  informal_definition: The relation of being non-identical; that one thing is NOT
+    the same as another
+  ostensive_examples:
+  - This apple is different from that orange
+  - The number 2 is different from the number 3
+  - Today is different from yesterday
+  negative_examples:
+  - Difference is not mere dissimilarity - identical twins are different persons despite
+    maximal similarity
+  - Difference is not opposition - up and down are opposed, but that's a specific
+    kind of difference
+  primitiveness_argument: While difference might seem definable as 'not identical',
+    this just pushes the primitiveness to negation and identity. But difference may
+    be as primitive as identity - you cannot grasp identity without implicitly grasping
+    what it means for things to NOT be identical.
+  decomposition_resistance: Try defining difference without using 'not the same',
+    'distinct', 'other', 'separate' - all of which ARE difference under other names.
+    The concept resists exit.
+  relevance_to_gaps: Without difference, we cannot express plurality, diversity, or
+    change. If we only had identity, everything would collapse into one. Difference
+    is the conceptual wedge that allows multiplicity.
+  confidence: 0.85
+  id: CAND_000_02

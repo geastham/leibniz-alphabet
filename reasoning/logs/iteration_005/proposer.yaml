@@ -1,0 +1,62 @@
+timestamp: '2026-01-18T19:40:47.410176'
+role: PROPOSER
+iteration: 5
+candidates:
+- label: normativity
+  domain: ethics
+  proposed_symbol: "\u22A8"
+  informal_definition: The dimension of ought/should/must; that some things are correct
+    or required while others are incorrect or forbidden.
+  ostensive_examples:
+  - You OUGHT to keep your promises
+  - 2+2 SHOULD equal 4 (epistemic normativity)
+  - This move is CORRECT in chess
+  negative_examples:
+  - Normativity is not regularity - things fall, but don't OUGHT to fall
+  - Normativity is not preference - I prefer chocolate, but it isn't CORRECT
+  primitiveness_argument: '''Should'', ''ought'', ''correct'', ''required'' ARE normativity.
+    The is/ought gap suggests non-derivability from descriptive facts.'
+  decomposition_resistance: Naturalistic reductions face open question argument. 'X
+    maximizes happiness' doesn't MEAN 'X is good'.
+  relevance_to_gaps: Cannot express obligations or values without normativity.
+  confidence: 0.75
+  id: CAND_005_00
+- label: truth
+  domain: knowledge
+  proposed_symbol: T
+  informal_definition: The correspondence between representation and reality; what
+    makes beliefs accurate and statements correct.
+  ostensive_examples:
+  - It is TRUE that snow is white
+  - Her belief is TRUE - things are as she thinks
+  - The map is TRUE to the territory
+  negative_examples:
+  - Truth is not belief - false beliefs exist
+  - Truth is not usefulness - useful falsehoods exist
+  primitiveness_argument: '''Corresponds to reality'', ''accurate'' - ''corresponds''
+    may just BE truth. Deeply contested.'
+  decomposition_resistance: Deflationism shows truth is so basic it's transparent.
+    All theories presuppose what they define.
+  relevance_to_gaps: Intentionality gives aboutness, truth gives CORRECTNESS of aboutness.
+  confidence: 0.7
+  id: CAND_005_01
+- label: valence
+  domain: emotion
+  proposed_symbol: "\xB1"
+  informal_definition: The positive-negative dimension of experience; that some experiences
+    feel good while others feel bad.
+  ostensive_examples:
+  - This pleasure has POSITIVE valence
+  - This pain has NEGATIVE valence
+  - Boredom has mildly negative valence
+  negative_examples:
+  - Valence is not intensity - mild and intense pleasure have same valence
+  - Valence is not preference - might prefer negative valence (challenging exercise)
+  primitiveness_argument: '''Feels good/bad'', ''pleasant/unpleasant'' ARE valence.
+    Felt positivity/negativity seems irreducible.'
+  decomposition_resistance: Reducing to approach/avoidance misses phenomenal quality.
+    We approach BECAUSE it feels good.
+  relevance_to_gaps: Quality gives WHAT KIND of experience, valence gives HOW IT FEELS
+    evaluatively.
+  confidence: 0.72
+  id: CAND_005_02

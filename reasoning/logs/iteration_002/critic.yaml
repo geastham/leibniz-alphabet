@@ -1,0 +1,178 @@
+timestamp: '2026-01-18T17:43:20.175170'
+role: CRITIC
+evaluations:
+- candidate_label: possibility
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as 'not necessarily false'
+      result: Circular - 'necessarily' is modal.
+      survived: true
+    - approach: synthetic
+      attempt: Break into possible worlds (Lewis)
+      result: Relocates rather than eliminates. 'Possible world' contains 'possible'.
+      survived: true
+    - approach: functional
+      attempt: Define as what physics permits
+      result: Too narrow. 'Permit' is modal.
+      survived: true
+    survived: true
+    notes: Modal circle unbreakable. Every definition uses possibility or necessity.
+  circularity:
+    concepts_traced:
+    - could
+    - might
+    - can
+    - able
+    - consistent
+    circular_paths: []
+    survived: true
+    notes: All modal concepts. Signature of a primitive.
+  redundancy:
+    can_be_expressed: false
+    using_primitives:
+    - existence
+    - identity
+    - negation
+    - succession
+    notes: Current alphabet is purely actual. Possibility adds modal dimension.
+  edge_cases:
+    cases_found:
+    - case: Epistemic vs metaphysical possibility
+      severity: medium
+    overall_severity: medium
+    notes: Concern types of possibility, not core concept.
+  cultural_variance:
+    evidence_for_universality:
+    - All languages have modal expressions
+    - Counterfactual reasoning universal
+    evidence_against: []
+    assessment: universal
+    notes: Modal thinking fundamental to planning.
+  parsimony:
+    expressiveness_value: essential
+    necessary: true
+    notes: Unlocks counterfactuals, abilities, alternatives.
+  verdict: ACCEPT
+  confidence: 0.92
+  reasoning_summary: Possibility is primitive - modal circle unbreakable. Essential
+    for counterfactuals.
+  key_insight: "With possibility, causation becomes expressible: C causes E iff \u25C7\
+    (\xACC) \u2192 \u25C7(\xACE)."
+  candidate_id: CAND_002_00
+- candidate_label: location
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as spatial relations to other objects (relationism)
+      result: Partial success - location might be bundle of spatial relations.
+      survived: false
+    - approach: synthetic
+      attempt: Break into distance + direction from reference
+      result: Presupposes spatial framework.
+      survived: true
+    - approach: functional
+      attempt: Define as where causal interactions occur
+      result: Circular - interactions happen AT locations.
+      survived: true
+    survived: false
+    notes: Relational analysis has force. Location might reduce to spatial relations.
+  circularity:
+    concepts_traced:
+    - where
+    - at
+    - in
+    - place
+    - position
+    circular_paths: []
+    survived: true
+    notes: Ordinary definitions circular, but relational analysis offers escape.
+  redundancy:
+    can_be_expressed: true
+    using_primitives:
+    - SPATIAL_RELATION
+    - identity
+    notes: Location = bundle of spatial relations.
+  edge_cases:
+    cases_found:
+    - case: Quantum non-locality
+      severity: high
+    - case: Abstract objects
+      severity: medium
+    overall_severity: high
+    notes: Physics challenges naive location concepts.
+  cultural_variance:
+    evidence_for_universality:
+    - All languages have spatial deixis
+    evidence_against: []
+    assessment: universal
+    notes: Universal but physics challenges naive conception.
+  parsimony:
+    expressiveness_value: high
+    necessary: false
+    notes: Need spatial primitive, but ADJACENCY or EXTENSION might be more fundamental.
+  verdict: REFINE
+  confidence: 0.65
+  reasoning_summary: Location may not be the right spatial primitive. Consider ADJACENCY
+    instead.
+  key_insight: Need spatial primitive, but should consider ADJACENCY or EXTENSION
+    as alternatives.
+  candidate_id: CAND_002_01
+- candidate_label: awareness
+  decomposition:
+    attempts:
+    - approach: analytic
+      attempt: Define as information processing
+      result: Fails - thermostat processes but isn't aware.
+      survived: true
+    - approach: synthetic
+      attempt: Break into intentionality + phenomenality
+      result: May succeed - these might be separable primitives.
+      survived: false
+    - approach: functional
+      attempt: Define as what makes processing into experiencing
+      result: Circular - experiencing IS awareness.
+      survived: true
+    survived: false
+    notes: Awareness might factor into INTENTIONALITY + PHENOMENALITY.
+  circularity:
+    concepts_traced:
+    - consciousness
+    - experience
+    - phenomenal
+    - qualia
+    circular_paths: []
+    survived: true
+    notes: All synonyms, but intentionality/phenomenality distinction offers decomposition.
+  redundancy:
+    can_be_expressed: true
+    using_primitives:
+    - INTENTIONALITY
+    - PHENOMENALITY
+    notes: Awareness = intentional + phenomenal state.
+  edge_cases:
+    cases_found:
+    - case: Blindsight - intentionality without phenomenality
+      severity: high
+    - case: Unconscious perception
+      severity: medium
+    overall_severity: high
+    notes: Blindsight suggests awareness is composite.
+  cultural_variance:
+    evidence_for_universality:
+    - All cultures distinguish conscious from unconscious
+    evidence_against:
+    - Concepts vary across traditions
+    assessment: mostly universal
+    notes: Core phenomenon universal but conceptualization varies.
+  parsimony:
+    expressiveness_value: high
+    necessary: false
+    notes: INTENTIONALITY might be more fundamental than awareness.
+  verdict: REFINE
+  confidence: 0.6
+  reasoning_summary: Awareness may decompose into intentionality + phenomenality.
+    Consider INTENTIONALITY as more primitive.
+  key_insight: Mental domain needs exploration. INTENTIONALITY (aboutness) may be
+    more fundamental.
+  candidate_id: CAND_002_02
