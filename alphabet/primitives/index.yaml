@@ -1,19 +1,19 @@
 alphabet_index:
   version: "1.0.0"
-  last_updated: "2026-01-18T17:51:30"
-  iteration: 3
+  last_updated: "2026-01-18T18:19:30"
+  iteration: 4
 
   statistics:
-    total_primitives: 8
+    total_primitives: 10
     by_domain:
       being: 2
-      relation: 2
+      relation: 3
       time: 1
       space: 1
       mind: 1
-      quality: 1
+      quality: 2
     by_status:
-      stable: 8
+      stable: 10
       recent: 0
       contested: 0
 
@@ -23,7 +23,7 @@ alphabet_index:
       domain: being
       symbol: "∃"
       prime: 2
-      brief_definition: "The bare fact that something IS rather than is not; the positive presence of being as opposed to nothingness."
+      brief_definition: "The bare fact that something IS rather than is not; the positive presence of being."
       status: stable
       added_iteration: 0
 
@@ -32,7 +32,7 @@ alphabet_index:
       domain: relation
       symbol: "≡"
       prime: 3
-      brief_definition: "The relation that each thing bears to itself and to nothing else; that a thing is the same as itself."
+      brief_definition: "The relation that each thing bears to itself and to nothing else."
       status: stable
       added_iteration: 0
 
@@ -41,7 +41,7 @@ alphabet_index:
       domain: relation
       symbol: "¬"
       prime: 5
-      brief_definition: "The logical operation that reverses truth value; the concept of NOT. Negation enables expressing absence, difference, and falsity."
+      brief_definition: "The logical operation of NOT; enables expressing absence, difference, and falsity."
       status: stable
       added_iteration: 1
 
@@ -50,7 +50,7 @@ alphabet_index:
       domain: time
       symbol: "≺"
       prime: 7
-      brief_definition: "The temporal relation of one moment coming after another; the before/after relation that structures time."
+      brief_definition: "The temporal before/after relation that structures time."
       status: stable
       added_iteration: 1
 
@@ -59,7 +59,7 @@ alphabet_index:
       domain: being
       symbol: "◇"
       prime: 11
-      brief_definition: "The modal status of what could be but is not necessarily so. Possibility marks the space of alternatives to actuality."
+      brief_definition: "The modal status of what could be; the space of alternatives to actuality."
       status: stable
       added_iteration: 2
 
@@ -68,7 +68,7 @@ alphabet_index:
       domain: space
       symbol: "⊣"
       prime: 13
-      brief_definition: "The basic spatial relation of being next to or touching; immediate spatial proximity. Adjacency is to space what succession is to time."
+      brief_definition: "The spatial relation of being next to; adjacency is to space what succession is to time."
       status: stable
       added_iteration: 3
 
@@ -77,7 +77,7 @@ alphabet_index:
       domain: mind
       symbol: "→m"
       prime: 17
-      brief_definition: "The aboutness or directedness of mental states; that mental states are OF or ABOUT something. The mark of the mental."
+      brief_definition: "The aboutness of mental states; that thoughts are OF or ABOUT something."
       status: stable
       added_iteration: 3
 
@@ -86,6 +86,24 @@ alphabet_index:
       domain: quality
       symbol: "Q"
       prime: 19
-      brief_definition: "The determinable aspect of things that admits of determinate values; the intrinsic character of things."
+      brief_definition: "The intrinsic character of things; WHAT KIND something is."
       status: stable
       added_iteration: 3
+
+    - id: P009
+      label: quantity
+      domain: quality
+      symbol: "#"
+      prime: 23
+      brief_definition: "The measurable magnitude; HOW MUCH or HOW MANY. Orthogonal to quality."
+      status: stable
+      added_iteration: 4
+
+    - id: P010
+      label: composition
+      domain: relation
+      symbol: "⊏"
+      prime: 29
+      brief_definition: "The part-whole relation; how simples combine into complex wholes. Meta-essential to the alphabet."
+      status: stable
+      added_iteration: 4

@@ -1,0 +1,34 @@
+id: P010
+label: composition
+domain: relation
+symbol: "\u228F"
+prime_number: 29
+definition:
+  informal: The part-whole relation; that some things are PARTS OF other things, constituting
+    them. Composition is how simple things combine into complex wholes. It is meta-essential
+    to the alphabet itself - complex concepts are COMPOSED of primitives.
+  formal: null
+examples:
+  ostensive:
+  - The wheel is PART OF the car
+  - The chapter is PART OF the book
+  - The cell is PART OF the organism
+  negative:
+  - Composition is not spatial containment - meanings are parts of sentences but not
+    spatially inside
+  - Composition is not set membership - my hand is part of me, not a member of {me}
+relationships:
+  contrasts_with: []
+  presupposes:
+  - P001
+  - P002
+  composes_well_with:
+  - P001
+  - P002
+  - P006
+  similar_to: []
+confidence: 0.85
+status: stable
+notes: 'Tenth primitive. The mereological foundation. Meta-essential: the Leibnizian
+  calculus requires composition to express how complex concepts are built from simple
+  primitives. The prime product scheme IS compositional.'
