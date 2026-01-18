@@ -1,0 +1,64 @@
+timestamp: '2026-01-18T17:49:14.360874'
+role: PROPOSER
+iteration: 3
+candidates:
+- label: adjacency
+  domain: space
+  proposed_symbol: "\u22A3"
+  informal_definition: The basic spatial relation of being next to or touching; immediate
+    spatial proximity without intervening space.
+  ostensive_examples:
+  - This brick is adjacent to that brick (touching)
+  - France is adjacent to Germany (sharing a border)
+  - The electron is adjacent to the nucleus
+  negative_examples:
+  - Adjacency is not identity - adjacent things are distinct
+  - Adjacency is not overlap - adjacent things touch but don't interpenetrate
+  primitiveness_argument: To define adjacency, we say 'touching', 'next to', 'bordering'
+    - but these ARE adjacency. Distance can be constructed from adjacency chains.
+  decomposition_resistance: Try defining 'next to' without adjacent, touching, bordering.
+    The spatial contact relation resists elimination.
+  relevance_to_gaps: Refined from 'location' per CRITIC. More fundamental - location
+    is relative position via adjacency.
+  confidence: 0.85
+  id: CAND_003_00
+- label: intentionality
+  domain: mind
+  proposed_symbol: "\u2192m"
+  informal_definition: The aboutness or directedness of mental states; that mental
+    states are OF or ABOUT something.
+  ostensive_examples:
+  - My belief is ABOUT the weather
+  - Her desire is FOR chocolate
+  - His fear is OF spiders
+  negative_examples:
+  - Intentionality is not causation - my thought about Paris isn't caused by Paris
+  - Intentionality is not physical connection - I can think about unicorns
+  primitiveness_argument: To define intentionality, we say 'about', 'of', 'directed
+    toward' - but these ARE intentionality.
+  decomposition_resistance: Naturalistic reductions either presuppose intentionality
+    or change the subject. Aboutness resists elimination.
+  relevance_to_gaps: Refined from 'awareness' per CRITIC. More fundamental - awareness
+    = intentionality + phenomenality.
+  confidence: 0.8
+  id: CAND_003_01
+- label: quality
+  domain: quality
+  proposed_symbol: Q
+  informal_definition: The determinable aspect of things that admits of determinate
+    values; that things have ways of being that can vary.
+  ostensive_examples:
+  - This apple has the quality of color with value red
+  - The water has the quality of temperature with value hot
+  - The sound has the quality of pitch with value high
+  negative_examples:
+  - Quality is not quantity - how much vs what kind
+  - Quality is not relation - qualities are intrinsic
+  primitiveness_argument: To define quality, we say 'property', 'attribute', 'way
+    of being' - all of which ARE quality.
+  decomposition_resistance: Attempts to reduce qualities to relations fail. Red things
+    are red, not merely related to redness.
+  relevance_to_gaps: Without quality, we cannot express what things are LIKE - their
+    intrinsic character.
+  confidence: 0.75
+  id: CAND_003_02

@@ -1,0 +1,31 @@
+id: P008
+label: quality
+domain: quality
+symbol: Q
+prime_number: 19
+definition:
+  informal: The determinable aspect of things that admits of determinate values; that
+    things have intrinsic ways of being that can vary. Quality is the dimension along
+    which properties like color, shape, temperature vary.
+  formal: null
+examples:
+  ostensive:
+  - This apple has the quality of color with value red
+  - The water has the quality of temperature with value hot
+  - The sound has the quality of pitch with value high
+  negative:
+  - Quality is not quantity - how much vs what kind
+  - Quality is not relation - qualities are intrinsic
+relationships:
+  contrasts_with: []
+  presupposes:
+  - P001
+  composes_well_with:
+  - P001
+  - P002
+  similar_to: []
+confidence: 0.82
+status: stable
+notes: Eighth primitive. Opens the qualitative dimension. Existence says THAT things
+  are, identity says WHICH thing, quality says WHAT KIND. Enables describing the intrinsic
+  character of things.

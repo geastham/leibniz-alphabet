@@ -1,0 +1,32 @@
+id: P006
+label: adjacency
+domain: space
+symbol: "\u22A3"
+prime_number: 13
+definition:
+  informal: The basic spatial relation of being next to or touching; immediate spatial
+    proximity without intervening space. Adjacency is the atomic spatial relation
+    from which distance and location can be constructed.
+  formal: null
+examples:
+  ostensive:
+  - This brick is adjacent to that brick (touching)
+  - France is adjacent to Germany (sharing a border)
+  - Neighboring cells in a grid
+  negative:
+  - Adjacency is not identity - adjacent things are distinct
+  - Adjacency is not overlap - adjacent things touch but don't interpenetrate
+relationships:
+  contrasts_with: []
+  presupposes:
+  - P001
+  - P002
+  composes_well_with:
+  - P001
+  - P004
+  similar_to: []
+confidence: 0.88
+status: stable
+notes: Sixth primitive. Opens the spatial dimension. Adjacency is to space what succession
+  is to time - the basic ordering relation. Location and distance can be derived from
+  adjacency chains.
