@@ -1,0 +1,57 @@
+evaluation:
+  candidate_label: "self-reference"
+  decomposition:
+    attempts:
+      - approach: "intentionality-based"
+        attempt: "Self-reference = intentionality directed at the bearer of that intentionality"
+        result: "This is exactly REFLEXIVITY, derived in iteration 7: →m(bearer-of-☉)"
+        survived: false
+      - approach: "identity-based"
+        attempt: "Self-reference = identity applied reflexively in thought"
+        result: "Collapses to intentionality(identity(self)) - uses existing primitives"
+        survived: false
+    survived: false
+    notes: "Self-reference was already derived as REFLEXIVITY in iteration 7. The loop structure of self-reference IS intentionality taking its own bearer as object."
+
+  circularity:
+    concepts_traced: ["intentionality", "phenomenality", "identity"]
+    survived: true
+    notes: "No circularity in the decomposition - we define self-reference in terms of simpler primitives."
+
+  redundancy:
+    can_be_expressed: true
+    using_primitives: ["intentionality", "phenomenality", "identity"]
+    derivation: "Self-reference = →m(bearer-of-☉) where bearer-of-☉ is the self identified via phenomenality"
+    notes: "FULLY REDUNDANT with existing derived concept REFLEXIVITY from iteration 7."
+
+  edge_cases:
+    cases_found:
+      - case: "Liar paradox 'this sentence is false'"
+        severity: "low"
+        analysis: "Expressible as: assertion that refers to itself + negation. The PARADOX arises from self-reference + negation, both of which we have."
+      - case: "Russell's paradox"
+        severity: "low"
+        analysis: "The set of all non-self-containing sets = composition(negation(self-membership)). Self-membership = self-reference applied to composition."
+      - case: "Gödel sentences"
+        severity: "low"
+        analysis: "Statements encoding their own unprovability = self-reference + negation(provability). Provability is a meta-level concept about formal systems."
+    overall_severity: "low"
+    notes: "All paradoxes expressible using self-reference, which is derivable. The POWER of self-reference comes from combining it with negation."
+
+  cultural_variance:
+    evidence_for_universality:
+      - "Self-awareness is universal in humans"
+      - "Reflexive pronouns exist in all languages"
+      - "Recursive thought appears universal"
+    assessment: "universal"
+    notes: "Self-reference is culturally universal, but that doesn't make it primitive - universality doesn't imply primitiveness."
+
+  parsimony:
+    expressiveness_value: "high"
+    necessary: false
+    notes: "Self-reference is expressively powerful but ALREADY DERIVABLE. Adding it as primitive would violate parsimony."
+
+  verdict: "REJECT"
+  confidence: 0.90
+  reasoning_summary: "Self-reference was already derived as REFLEXIVITY in iteration 7. It decomposes to intentionality directed at the bearer of phenomenality. The paradox-generating power comes from COMBINING self-reference with negation - both already available."
+  key_insight: "The alphabet already contains self-reference as a derived concept. Paradoxes arise from self-reference PLUS negation - composition of existing concepts."

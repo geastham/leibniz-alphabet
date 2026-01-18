@@ -1,0 +1,52 @@
+candidates:
+  - label: "self-reference"
+    domain: "relation"
+    proposed_symbol: "⟲"
+    informal_definition: "The relation a thing bears to itself in thought or language; the capacity for a statement, set, or mind to take itself as object."
+    ostensive_examples:
+      - "'This sentence is false' (liar paradox)"
+      - "The set of all sets that don't contain themselves (Russell's paradox)"
+      - "Gödel sentences that encode their own unprovability"
+      - "A consciousness aware of itself"
+    negative_examples:
+      - "Reference to other things (not self)"
+      - "Simple identity (A=A) without reflexive thought"
+    primitiveness_argument: "Self-reference seems to be the source of paradox and deep mathematical limits. Gödel, Tarski, and Turing all point to self-reference as generating undecidability. Perhaps this loop-structure is primitive."
+    decomposition_resistance: "Decomposing self-reference into intentionality+identity loses the paradox-generating power - what makes self-reference special is the loop, the taking-oneself-as-object."
+    relevance_to_gaps: "Tests whether paradoxes and incompleteness theorems can be expressed. Critical verification test."
+    confidence: 0.4
+
+  - label: "simultaneity"
+    domain: "time"
+    proposed_symbol: "∥"
+    informal_definition: "The relation of occurring at the same time; co-presence in the temporal dimension without before or after."
+    ostensive_examples:
+      - "Two clocks striking noon together"
+      - "The flash and the bang in nearby lightning"
+      - "Concurrent processes in computing"
+      - "Synchronous events in physics"
+    negative_examples:
+      - "Succession (one after another)"
+      - "Coexistence in space (spatial, not temporal)"
+    primitiveness_argument: "Succession gives us BEFORE/AFTER, but perhaps AT-THE-SAME-TIME is primitive. Relativity shows simultaneity is relative and non-trivial. Maybe it requires its own primitive."
+    decomposition_resistance: "Trying to define simultaneity as 'negation of succession' fails - not being before or after isn't the same as being simultaneous. There might be no temporal relation at all."
+    relevance_to_gaps: "Tests completeness of temporal primitives. If derivable from succession+negation, confirms time is complete."
+    confidence: 0.3
+
+  - label: "transcendence"
+    domain: "being"
+    proposed_symbol: "↟"
+    informal_definition: "That which exceeds or goes beyond any limit, categorization, or finite description; the ineffable dimension that escapes the alphabet itself."
+    ostensive_examples:
+      - "The mystical 'whereof one cannot speak' (Wittgenstein)"
+      - "Kant's noumena beyond phenomena"
+      - "The infinite beyond any finite description"
+      - "Apophatic theology's 'God beyond being'"
+    negative_examples:
+      - "Merely unknown things (epistemic limit)"
+      - "Infinity (which we derived as unbounded quantity)"
+      - "Mystery (which may just be current ignorance)"
+    primitiveness_argument: "If transcendence is primitive, the alphabet cannot be complete - there's always something it cannot capture. This is the ultimate verification test."
+    decomposition_resistance: "Defining transcendence in terms of negation ('not X for any X') seems to invoke it - the beyond-all-categories requires naming a category to negate."
+    relevance_to_gaps: "The hardest verification test. If derivable, the alphabet is truly complete. If primitive, we must add it (or accept incompleteness)."
+    confidence: 0.2

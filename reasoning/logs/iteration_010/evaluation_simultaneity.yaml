@@ -1,0 +1,61 @@
+evaluation:
+  candidate_label: "simultaneity"
+  decomposition:
+    attempts:
+      - approach: "negation-of-succession"
+        attempt: "Simultaneity = negation(succession) in both directions"
+        result: "Two events A,B are simultaneous iff ¬(A≺B) ∧ ¬(B≺A) - mutual non-precedence"
+        survived: false
+      - approach: "co-existence-in-time"
+        attempt: "Simultaneity = existence(A) + existence(B) + shared temporal moment"
+        result: "Shared temporal moment = neither precedes the other = back to negation(succession)"
+        survived: false
+      - approach: "relativistic"
+        attempt: "Simultaneity is frame-dependent in physics - maybe needs its own primitive"
+        result: "Frame-dependence is a physical fact about simultaneity, not the concept itself. The concept remains derivable."
+        survived: false
+    survived: false
+    notes: "Simultaneity fully decomposes to: co-existence + mutual non-succession. A ∥ B = ∃A ∧ ∃B ∧ ¬(A≺B) ∧ ¬(B≺A)"
+
+  circularity:
+    concepts_traced: ["existence", "negation", "succession"]
+    survived: true
+    notes: "Clean derivation using only existing primitives."
+
+  redundancy:
+    can_be_expressed: true
+    using_primitives: ["existence", "negation", "succession"]
+    derivation: "Simultaneity(A,B) = ∃A ∧ ∃B ∧ ¬(A≺B) ∧ ¬(B≺A)"
+    notes: "FULLY DERIVABLE from existence, negation, and succession."
+
+  edge_cases:
+    cases_found:
+      - case: "Relativistic simultaneity (frame-dependent)"
+        severity: "low"
+        analysis: "That simultaneity is relative doesn't make it primitive. The CONCEPT is still derivable. Physics adds that the answer varies by reference frame."
+      - case: "Instantaneous vs. extended events"
+        severity: "low"
+        analysis: "Extended events that overlap are 'simultaneous' in the overlap. This uses composition + succession."
+      - case: "Atemporal entities (numbers, abstract objects)"
+        severity: "low"
+        analysis: "Non-temporal things aren't in succession relations - simultaneity doesn't apply. This is appropriate."
+    overall_severity: "low"
+    notes: "All edge cases handled by the derivation."
+
+  cultural_variance:
+    evidence_for_universality:
+      - "All cultures have concepts of 'at the same time'"
+      - "Coordination requires simultaneity concept"
+      - "Music, dance, ritual all involve synchrony"
+    assessment: "universal"
+    notes: "Universal concept, but derivable - not primitive."
+
+  parsimony:
+    expressiveness_value: "medium"
+    necessary: false
+    notes: "Simultaneity adds no new expressive power beyond what succession + negation provide."
+
+  verdict: "REJECT"
+  confidence: 0.85
+  reasoning_summary: "Simultaneity is fully derivable as mutual non-succession of co-existing events. The formula A ∥ B = ∃A ∧ ∃B ∧ ¬(A≺B) ∧ ¬(B≺A) captures the concept using only existence, negation, and succession."
+  key_insight: "Temporal relations are COMPLETE with succession alone. Before, after, and at-the-same-time all reduce to succession + negation. The single temporal primitive suffices."
